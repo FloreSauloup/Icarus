@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :vehicles, only: [:index, :show] do
     ressources :rentings, only: [:create]
   end
-	namespace :owner, do
+	namespace :owner do
 		ressources :vehicles, only [:new, :create]
 		ressources :rentings, only [:index] do
 			member do
