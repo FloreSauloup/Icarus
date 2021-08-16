@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_fe1994f6-5d87-453d-a526-c49c7059f187",
+      "org_id": "user_9fb53435-e260-4b34-b9ae-58e2c268a25b",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_fe1994f6-5d87-453d-a526-c49c7059f187.git",
+      "name": "Icarus",
+      "alias": "Icarus"
+    }
+  ]
+}
