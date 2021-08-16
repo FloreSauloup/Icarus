@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 				  patch :decline
 			  end
 		  end
-    end
+   end
   end
 	ressources :rentings, only: [:index]
 end
