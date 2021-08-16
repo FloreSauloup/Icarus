@@ -6,12 +6,13 @@ Rails.application.routes.draw do
   end
 	namespace :owner do
 		ressources :vehicles, only: [:new, :create]
-		ressources :rentings, only: [:index] do
-			member do
-				patch :accept
-				patch :decline
-			end
-		end
+		  ressources :rentings, only: [:index] do
+			  member do
+				  patch :accept
+				  patch :decline
+			  end
+		  end
+    end
   end
 	ressources :rentings, only: [:index]
 end
