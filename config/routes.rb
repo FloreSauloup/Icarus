@@ -5,13 +5,13 @@ Rails.application.routes.draw do
     ressources :rentings, only: [:create]
   end
 	namespace :owner do
-		ressources :vehicles, only [:new, :create]
-		ressources :rentings, only [:index] do
+		ressources :vehicles, only: [:new, :create]
+		ressources :rentings, only: [:index] do
 			member do
 				patch :accept
 				patch :decline
 			end
 		end
   end
-	ressources :rentings, only [:index]
+	ressources :rentings, only: [:index]
 end
