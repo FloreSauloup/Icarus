@@ -4,12 +4,13 @@ Rails.application.routes.draw do
   resources :vehicles, only: [:index, :show] do
     resources :rentings, only: [:create]
   end
+
 	namespace :owner do
 		resources :vehicles, only: [:new, :create]
-		  resources :rentings, only: [:index] do
-			  member do
-				  patch :accept
-				  patch :decline
+		resources :rentings, only: [:index] do
+			member do
+				patch :accept
+				patch :decline
 		  end
     end
   end
