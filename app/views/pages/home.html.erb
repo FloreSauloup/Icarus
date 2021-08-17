@@ -11,16 +11,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to "Log in", "#", class: "nav-link" %>
+        <%= link_to "Log in", new_user_session_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Sign up", "#", class: "nav-link" %>
+        <%= link_to "Sign up", user_session_path, class: "nav-link" %>
       </li>
       <li class="nav-item dropdown">
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Action", "#", class: "dropdown-item" %>
-          <%= link_to "Another action", "#", class: "dropdown-item" %>
+          <%= link_to "Dashboard", rentings_path, class: "dropdown-item" %>
+          <%= link_to "Settings", "#", class: "dropdown-item" %>
         </div>
       </li>
     </ul>
@@ -29,25 +29,31 @@
 
 <div class="banner">
   <div class="container">
-    <h1>Find the perfect flying vehicle that will take you to the skies</h1>
-    <p>Whether it's a kite or a rocket, avoid the hassles of earthly life by taking flight now.</p>
-    <%= link_to "Browse vehicles", vehicles_path, class: "btn btn-flat" %>
+    <h1>Find the perfect flying vehicle <br> that will take you to the skies</h1>
+    <p>Whether it's a kite or a rocket, avoid the hassles of earthly life <br> by taking flight now.</p>
+    <%= link_to "Browse vehicles", vehicles_path, class: "btn btn-flat blue-btn" %>
   </div>
 </div>
 
-<div class="card-product">
-  <%= image_tag 'homepage_space.png' %>
-  <div class="card-product-infos">
-    <h2>Become a host</h2>
-    <p>Start sharing your flying vehicle on Icarus</p>
+<div class="action-container">
+  <div class="card-product">
+    <%= image_tag 'homepage_space.png' %>
+    <div class="card-product-infos">
+      <%= link_to new_user_session_path, class: "card-product" do %>
+        <h2>Become a host > </h2>
+      <% end %>
+      <p>Start sharing your flying vehicle on Icarus</p>
+    </div>
   </div>
-</div>
 
-<div class="card-product">
-  <%= image_tag 'homepage_world.png' %>
-  <div class="card-product-infos">
-    <h2>Book a flying vehicles</h2>
-    <p>Across the country, find the perfect vehicle for your next adventure</p>
+  <div class="card-product">
+    <%= image_tag 'homepage_world.png' %>
+    <div class="card-product-infos">
+      <%= link_to vehicles_path, class: "card-product" do %>
+        <h2> Book a flying vehicle >  </h2>
+      <% end %>
+      <p>Across the country, find the perfect vehicle for your next adventure</p>
+    </div>
   </div>
 </div>
 

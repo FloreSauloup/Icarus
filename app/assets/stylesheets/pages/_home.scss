@@ -1,25 +1,20 @@
 // Specific CSS for your home-page
+
 body {
   font-family: Helvetica;
+  background-color: white;
 }
 
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+h1 {
+  text-align: center;
+  font-family: $headers-font;
+  font-weight: bold;
 }
 
 .banner {
   //background-image: url("../assets/images/banner.jpg");
-  background-image: asset-url("banner.jpg"), linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
-  height: 100vh;
+  background-image: asset-url("banner3.jpg"), linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+  height: 85vh;
   background-size: cover;
   background-position: center;
   padding: 150px 0;
@@ -29,23 +24,30 @@ body {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 48px;
   font-weight: bold;
+  padding-bottom: 12px;
+  margin-top: 20px;
 }
 
 .banner p {
-  font-size: 20px;
+  font-size: 23px;
   color: white;
   opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(10, 1, 1, 0.412);
+  padding-bottom: 7px;
 }
 
 .btn-flat {
   color: white;
-  padding: 8px 24px;
+  padding: 14px 30px 14px 30px;
   border-radius: 4px;
   background: #2F2FA2;
   transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+
 }
 
 .footer {
@@ -77,33 +79,46 @@ body {
 
 .card-product {
   overflow: hidden;
-  height: 120px;
+  height: 450px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
   align-items: center;
 }
 
 .card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 55px;
+}
+
+img {
+  width: 35%;
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 28px;
+  padding-top: 12px;
   font-weight: bold;
-  margin: 0;
+  color: #2F2FA2;
+  text-align: center;
+
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: 8px;
+  margin-top: 16px;
+  text-align: center;
 }
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+.action-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
