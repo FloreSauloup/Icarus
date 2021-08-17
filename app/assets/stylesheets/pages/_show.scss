@@ -1,0 +1,33 @@
+.banner_show {
+  // background-color: #2F2FA2;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.h1 {
+  margin: 0;
+  color: black;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.p {
+  font-size: 20px;
+  color: black;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.double_banner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner_double_banner {
+  display: flex;
+  size: 45%;
+  padding: 2px;
+}
