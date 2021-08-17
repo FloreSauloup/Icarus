@@ -1,0 +1,17 @@
+
+
+<div class="vehicles-container">
+  <h1>All vehicles</h1>
+  <div class="vehicles">
+    <% @vehicles.each do |vehicle| %>
+      <div class="vehicle">
+        <%= link_to vehicle.name, vehicle_path(vehicle)  %>
+        <%= vehicle.vehicle_type %>
+        $<%= vehicle.price_per_day %>k
+          <div class="vehicle-img">
+            <%= image_tag vehicle.photo, width: 300%>
+          </div>
+      </div>
+    <% end %>
+  </div>
+</div>
