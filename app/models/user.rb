@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :vehicles, foreign_key: :owner_id
   has_many :owner_rentings, through: :vehicles, source: :rentings
 
+  has_one_attached :avatar
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :email, presence: true, uniqueness: true
