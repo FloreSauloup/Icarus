@@ -28,23 +28,24 @@
 </div>
 
 <div class="header-index">
-<h1>All vehicles</h1>
+<h1>What would you like for going up to the heaven ? </h1>
 </div>
 
 <div>
   <h2>Decouvrez nos véhicules: </h2>
 </div>
 
-<div class="vehicles">
-  <% @vehicles.each do |vehicle| %>
-    <div class="card vehicle" style="width: 18rem;">
-      <%= image_tag vehicle.photo, class: "card-img-top"%>
-      <div class="card-body">
-        <h5 class="card-title"> <%= vehicle.name.capitalize  %></h5>
-        <p class="card-text"></p>
-        <span class="label-vehicle-type"><%= vehicle.vehicle_type.upcase %></span>
-        $<%= vehicle.price_per_day/1000.to_i %> k
+<div class="container my-3">
+  <div class="cards">
+    <% @vehicles.each do |vehicle| %>
+      <div class="card-category">
+        <%= image_tag vehicle.photo, class: "card-img"%>
+        <div class="top-right">
+            <span class="label-vehicle-type"><%= vehicle.vehicle_type.upcase %></span>
+            <br>
+            $<%= vehicle.price_per_day/1000 %> k
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

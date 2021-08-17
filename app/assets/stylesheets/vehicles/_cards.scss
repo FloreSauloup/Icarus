@@ -1,0 +1,87 @@
+.container {
+}
+
+.cards {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+
+}
+
+.card-category {
+position: relative;
+height: 280px;
+width: 530px;
+background-position: center;
+display: flex;
+color: white;
+font-size: 24px;
+font-weight: bold;
+margin: 20px;
+text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+border-radius: 20px;
+text-decoration: none;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  &:hover {
+      background: white;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+}
+
+.card-img {
+  background-size: cover;
+  border-radius: 20px;
+
+}
+
+.label-vehicle-type {
+  color: #2F2FA2;
+  border-radius: 30px;
+  background-color: #B0B0E8;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.top-right{
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  right: 10px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .vehicles {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .vehicles {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .vehicles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .vehicles {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .vehicles {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
