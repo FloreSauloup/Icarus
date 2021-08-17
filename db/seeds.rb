@@ -11,7 +11,7 @@ Vehicle.destroy_all
 User.destroy_all
 
 puts 'Create user1'
-User.create!(
+nans = User.new(
   email: "nans@example.com",
   password: "password",
   first_name: "Nans",
@@ -19,19 +19,29 @@ User.create!(
   phone_number: "+33613551000",
   description: "i'm student"
 )
+file = File.open(Rails.root.join('db/fixtures/users/nans.jpg'))
+nans.avatar.attach(io: file, filename: 'nans.jpg', content_type: 'image/jpeg')
+nans.save!
+
 puts "Done"
 puts 'Create user2'
-User.create!(
-  email: "bernard@example.com",
+
+simon = User.new(
+  email: "simon@example.com",
   password: "password",
-  first_name: "Bernard",
+  first_name: "Simon",
   last_name: "Tapis",
   phone_number: "+33620401000",
   description: "i'm pdg"
 )
+file = File.open(Rails.root.join('db/fixtures/users/simon.jpg'))
+simon.avatar.attach(io: file, filename: 'simon.jpg', content_type: 'image/jpeg')
+simon.save!
+
 puts "Done"
 puts 'Create user3'
-User.create!(
+
+mathis = User.new(
   email: "mathis@example.com",
   password: "password",
   first_name: "Mathis",
@@ -39,9 +49,15 @@ User.create!(
   phone_number: "+33612361000",
   description: "i'm freelance"
 )
+file = File.open(Rails.root.join('db/fixtures/users/mathis.jpg'))
+mathis.avatar.attach(io: file, filename: 'mathis.jpg', content_type: 'image/jpeg')
+mathis.save!
+
 puts "Done"
 puts 'Create vehicle1'
-etoile_noir = Vehicle.create!(
+
+
+etoile_noire = Vehicle.new(
   owner: User.last,
   vehicle_type: "UFO",
   total_seats: 12,
@@ -50,9 +66,14 @@ etoile_noir = Vehicle.create!(
   price_per_day: 100_000,
   name: "Etoile noir"
 )
+
+file = File.open(Rails.root.join('db/fixtures/vehicles/etoile_noire.jpg'))
+etoile_noire.photo.attach(io: file, filename: 'etoile_noire.jpg', content_type: 'image/jpeg')
+etoile_noire.save!
+
 puts "Done"
 puts 'Create vehicle2'
-skywalker = Vehicle.create!(
+skywalker = Vehicle.new(
   owner: User.last,
   vehicle_type: "Vaisseau spatial",
   total_seats: 2,
@@ -61,9 +82,14 @@ skywalker = Vehicle.create!(
   price_per_day: 3_000_000,
   name: "skywalker"
 )
+file = File.open(Rails.root.join('db/fixtures/vehicles/skywalker.jpg'))
+skywalker.photo.attach(io: file, filename: 'skywalker.jpg', content_type: 'image/jpeg')
+skywalker.save!
+
 puts "Done"
 puts 'Create vehicle3'
-jet_100 = Vehicle.create!(
+
+privatejet = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 3,
@@ -72,9 +98,14 @@ jet_100 = Vehicle.create!(
   price_per_day: 15_000,
   name: "Jet 100 2.0"
 )
+file = File.open(Rails.root.join('db/fixtures/vehicles/privatejet.jpg'))
+privatejet.photo.attach(io: file, filename: 'privatejet.jpg', content_type: 'image/jpeg')
+privatejet.save!
+
 puts "Done"
-puts 'Create vehicle3'
-da_vinci = Vehicle.create!(
+puts 'Create vehicle4'
+
+davinci = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 5,
@@ -83,25 +114,34 @@ da_vinci = Vehicle.create!(
   price_per_day: 1000,
   name: "Da Vinci"
 )
+file = File.open(Rails.root.join('db/fixtures/vehicles/davinci.jpg'))
+davinci.photo.attach(io: file, filename: 'davinci.jpg', content_type: 'image/jpeg')
+davinci.save!
+
 puts "Done"
 puts 'Create renting1'
+
 start_date = Time.new(2021, 10, 31)
 end_date = Time.new(2021, 11, 31)
 Renting.create!(
   user: User.last,
-  vehicle: da_vinci,
+  vehicle: davinci,
   start_date: start_date,
   end_date: end_date,
-  total_price: (end_date - start_date) * da_vinci.price_per_day,
+  total_price: (end_date - start_date) * davinci.price_per_day,
   status: "rented"
 )
 puts "Done"
 puts 'Create renting2'
-# Renting.create!(
-#   user: User.last,
-#   vehicle: Vehicle.first,
-#   start_date: Time.new(2021, 11, 27),
-#   end_date: Time.new(2021, 12, 10),
-#   total_price: (end_date - start_date) * price_per_day,
-#   status: "in attempt"
-# )
+
+start_date = Time.new(2021, 11, 27)
+end_date = Time.new(2021, 12, 10)
+
+Renting.create!(
+  user: User.last,
+  vehicle: Vehicle.first,
+  start_date: start_date,
+  end_date: end_date,
+  total_price: (end_date - start_date) * etoile_noire.price_per_day,
+  status: "in attempt"
+)
