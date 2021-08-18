@@ -6,8 +6,9 @@
   <h2>Decouvrez nos véhicules: </h2>
 </div>
 
-<div class="container my-3">
-  <div class="cards">
+<div class="container-index">
+
+  <div class="card-vehicles">
     <% @vehicles.each do |vehicle| %>
         <div class="card-category">
       <%= link_to vehicle_path(vehicle) do %>
@@ -20,5 +21,11 @@
           </div>
         </div>
     <% end %>
+  </div>
+
+  <div id="map" class="map-index"
+    style="width: 100%; height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   </div>
 </div>

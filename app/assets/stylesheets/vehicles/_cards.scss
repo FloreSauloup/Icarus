@@ -1,13 +1,19 @@
-.container {
+.container-index {
+  margin-left: 0px;
+  padding: 0px;
+  display: flex;
+  width: 100vw;
 }
 
-.cards {
 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 20px;
-
+.card-vehicles {
+  min-width: 60vw;
 }
+
+.map-index {
+  min-width: 40vw;
+}
+
 
 .card-category {
 position: relative;
