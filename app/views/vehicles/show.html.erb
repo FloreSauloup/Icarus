@@ -1,27 +1,41 @@
-<div class="header_show">
-  <h1><%= @vehicle.name%></h1>
-</div>
-<div class="container-show">
+
+
+<div class="picture-show">
   <div class="picture">
-      <%= image_tag @vehicle.photo, width: 500 %>
-      💰<%= @vehicle.price_per_day %> per day
-      <p>🛸<%= @vehicle.vehicle_type %>.<br><%= @vehicle.summary %>
+      <%= image_tag @vehicle.photo, class: "card-img-show" %>
+      <div class="bottom-center d-flex justify-content-around">
+        <div class="flex-item">
+          <%= @vehicle.price_per_day %> $
+          <span class="price-lighter"> <p>per day </p></span>
+        </div>
+        <div class="flex-item">
+          <%= @vehicle.vehicle_type %>
+          <span class="price-lighter"> <p>Type </p></span>
+        </div>
+      </div>
   </div>
 
   <div class="content_show">
-    <%= image_tag @vehicle.owner.avatar, width: 50 %>
-    Get to know the owner: <%= @vehicle.owner.first_name %>.
-    <div class="inner_double_banner">
-      <p>📍 <%= @vehicle.address %>, Space, Milkyway || 💺 <%= @vehicle.total_seats %></p>
+    <h1 class="h1-item"><%= @vehicle.name%></h1>
+    <div class="d-flex justify-content-start">
+      <div class="flex-item">
+        <%= image_tag @vehicle.owner.avatar, class: "show-avatar" %>
+      </div>
+      <div class="flex-item">
+        <h2 class= "h2-item"><%= @vehicle.owner.first_name %>'s vehicle</h2>
+      </div>
     </div>
-    <div class="inner_double_banner">
-      <%= link_to "Share", href="", class: "btn btn-primary" %>
-      <%= link_to "Save", href="", class: "btn btn-primary" %>
+    <h3 class= "h3-item"> 📍 <%= @vehicle.address %> </h3>
+    <h3 class= "h3-item"> 💺 <%= @vehicle.total_seats %></h3>
+    <br>
+    <p><%= @vehicle.summary %></p>
+    <br>
+    <div class="form-renting">
+      <%= simple_form_for @renting do |f| %>
+        <%= f.input :start_date %>
+        <%= f.input :end_date %>
+        <%= f.button :submit, class: "btn-submit btn-flat" %>
+      <% end %>
     </div>
-    <%= simple_form_for @renting do |f| %>
-      <%= f.input :start_date %>
-      <%= f.input :end_date %>
-      <%= f.button :submit, class: "btn btn-flat" %>
-    <% end %>
   </div>
 </div>
