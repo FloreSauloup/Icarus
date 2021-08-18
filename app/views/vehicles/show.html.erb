@@ -34,7 +34,7 @@
       <%= simple_form_for @renting do |f| %>
         <%= f.input :start_date %>
         <%= f.input :end_date %>
-        <%= f.button :submit, class: "btn-submit btn-flat" %>
+        <%= f.button :submit, "Rent the" + " "+@vehicle.name , class: "btn-submit btn-flat" %>
       <% end %>
     </div>
   </div>
