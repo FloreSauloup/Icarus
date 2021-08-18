@@ -103,22 +103,6 @@ privatejet.photo.attach(io: file, filename: 'privatejet.jpg', content_type: 'ima
 privatejet.save!
 
 puts "Done"
-puts 'Create vehicle4'
-sleep 1
-davinci = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "Old technology",
-  total_seats: 1,
-  summary: "A bird machine, designed by Leonardo Da Vinci",
-  address: "15 Rue de Strasbourg, 44000 Nantes",
-  price_per_day: 100,
-  name: "Da Vinci"
-)
-file = File.open(Rails.root.join('db/fixtures/vehicles/davinci.jpg'))
-davinci.photo.attach(io: file, filename: 'davinci.jpg', content_type: 'image/jpeg')
-davinci.save!
-
-puts "Done"
 puts 'Create vehicle5'
 sleep 1
 avion = Vehicle.new(
@@ -421,6 +405,23 @@ wingsuit = Vehicle.new(
 file = File.open(Rails.root.join('db/fixtures/vehicles/wingsuit.jpg'))
 wingsuit.photo.attach(io: file, filename: 'wingsuit.jpg', content_type: 'image/jpeg')
 wingsuit.save!
+
+puts "Done"
+puts 'Create vehicle4'
+sleep 1
+
+davinci = Vehicle.new(
+  owner: User.first,
+  vehicle_type: "Old technology",
+  total_seats: 1,
+  summary: "A bird machine, designed by Leonardo Da Vinci",
+  address: "15 Rue de Strasbourg, 44000 Nantes",
+  price_per_day: 100,
+  name: "Da Vinci"
+)
+file = File.open(Rails.root.join('db/fixtures/vehicles/davinci.jpg'))
+davinci.photo.attach(io: file, filename: 'davinci.jpg', content_type: 'image/jpeg')
+davinci.save!
 
 puts "Done"
 puts 'Create renting1'
