@@ -81,8 +81,8 @@ milenium_flacon = Vehicle.new(
   price_per_day: 3_000_000,
   name: "Mileninum Flacon"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/mileninum_flacon.jpg'))
-mileninum_flacon.photo.attach(io: file, filename: 'mileninum_flacon.jpg', content_type: 'image/jpeg')
+file = File.open(Rails.root.join('db/fixtures/vehicles/milenium_falcon.jpg'))
+mileninum_flacon.photo.attach(io: file, filename: 'milenium_falcon.jpg', content_type: 'image/jpeg')
 mileninum_flacon.save!
 
 puts "Done"
@@ -337,8 +337,8 @@ star_wars = Vehicle.new(
   price_per_day: 4_000,
   name: "X-wing"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/star_wars.jpg'))
-star_wars.photo.attach(io: file, filename: 'star_wars.jpg', content_type: 'image/jpeg')
+file = File.open(Rails.root.join('db/fixtures/vehicles/star_wars_20.jpg'))
+star_wars.photo.attach(io: file, filename: 'star_wars_20.jpg', content_type: 'image/jpeg')
 star_wars.save!
 
 puts "Done"
