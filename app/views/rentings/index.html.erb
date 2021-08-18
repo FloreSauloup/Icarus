@@ -7,22 +7,23 @@
 </div>
 
 <div class="container my-3">
-  <div class="cards">
+  <div class="cards-renting">
     <% @rentings.each do |renting| %>
-        <div class="card-category">
-      <%= link_to vehicle_path(renting) do %>
-          <%= image_tag renting.vehicle.photo, class: "card-img"%>
-      <% end %>
-          <div class="top-right">
-              <span class="label-vehicle-type"><%= renting.vehicle.vehicle_type.upcase %></span>
+        <div class="card-renting-category">
+          <div class="renting-top-right">
+              <span class="label-vehicle-name"><%= renting.vehicle.name.upcase %></span>
               <br>
-              $<%= renting.vehicle.price_per_day/1000 %> k
+              $<%= renting.total_price/1000 %> k
           </div>
-          <div class="top-right">
-              <span class="label-renter"><%= renting.user.first_name.upcase %></span>
-              <br>
-              <span class="label-renter"><%= renting.user.last_name.upcase %></span>
-              $<%= renting.vehicle.price_per_day/1000 %> k
+          <div class="renting-top-left">
+            <h2>Renter's name <%= renting.user.first_name%> <%= renting.user.last_name%></h2>
+            <p>Renter's email <%= renting.user.email%></p>
+            <p>Renter's phone <%= renting.user.phone_number%></p>
+            <p>Renter's description "<%= renting.user.description%>"</p>
+          </div>
+          <div class="renting-bottom-right">
+            <%= link_to "✅", accept_owner_renting_path(renting), class: "btn btn-success" %>
+            <%= link_to "❌", decline_owner_renting_path(renting), method: :delete, class: "btn btn-danger" %>
           </div>
         </div>
     <% end %>
