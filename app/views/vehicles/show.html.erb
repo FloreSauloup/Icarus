@@ -1,39 +1,27 @@
-<div class="banner_show" %>
-  <div class="container">
-    <h1><%= @vehicle.name%></h1>
-    <div class="double_banner">
-      <div class="inner_double_banner">
-        <p>📍 <%= @vehicle.address %>, Space, Milkyway || 💺 <%= @vehicle.total_seats %></p>
-      </div>
-      <div class="inner_double_banner">
-        <%= link_to "Share", href="", class: "btn btn-primary" %>
-        <%= link_to "Save", href="", class: "btn btn-primary" %>
-      </div>
-    </div>
-    <%= image_tag @vehicle.photo, width: 500 %>
+<div class="header_show">
+  <h1><%= @vehicle.name%></h1>
+</div>
+<div class="container-show">
+  <div class="picture">
+      <%= image_tag @vehicle.photo, width: 500 %>
+      💰<%= @vehicle.price_per_day %> per day
+      <p>🛸<%= @vehicle.vehicle_type %>.<br><%= @vehicle.summary %>
+  </div>
 
-    <div class="double_banner">
-      <div class="inner_double_banner">
-        <p>🛸<%= @vehicle.vehicle_type %>.<br><%= @vehicle.summary %>
-        <br>
-        <%= image_tag @vehicle.owner.avatar, width: 50 %>Get to know the owner: <%= @vehicle.owner.first_name %>.
-        <br>
-        <br>
-        💰<%= @vehicle.price_per_day %> per day
-        <br>
-        📍<%= @vehicle.address %></p>
-      </div>
-      <div class="inner_double_banner">
-        <%= simple_form_for @renting do |f| %>
-          <div class="inner_double_banner">
-            <%= f.input :start_date %>
-          </div>
-          <div class="double_banner">
-            <%= f.input :end_date %>
-          </div>
-          <%= f.button :submit, class: "btn btn-flat" %>
-        <% end %>
-      </div>
+  <div class="content_show">
+    <%= image_tag @vehicle.owner.avatar, width: 50 %>
+    Get to know the owner: <%= @vehicle.owner.first_name %>.
+    <div class="inner_double_banner">
+      <p>📍 <%= @vehicle.address %>, Space, Milkyway || 💺 <%= @vehicle.total_seats %></p>
     </div>
+    <div class="inner_double_banner">
+      <%= link_to "Share", href="", class: "btn btn-primary" %>
+      <%= link_to "Save", href="", class: "btn btn-primary" %>
+    </div>
+    <%= simple_form_for @renting do |f| %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.button :submit, class: "btn btn-flat" %>
+    <% end %>
   </div>
 </div>
