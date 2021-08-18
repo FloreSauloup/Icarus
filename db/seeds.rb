@@ -55,13 +55,13 @@ mathis.save!
 
 puts "Done"
 puts 'Create vehicle1'
-
+sleep 1
 etoile_noire = Vehicle.new(
   owner: User.last,
   vehicle_type: "UFO",
   total_seats: 120,
   summary: "A fully fonctionnal battle station. It can destroy rebels and entire planets!",
-  address: "58, rue Pierre De Coubertin, 31100 TOULOUSE",
+  address: "58 rue Pierre De Coubertin, 31100 TOULOUSE",
   price_per_day: 100_000,
   name: "Etoile noir"
 )
@@ -72,12 +72,13 @@ etoile_noire.save!
 
 puts "Done"
 puts 'Create vehicle2'
+sleep 1
 mileninum_flacon = Vehicle.new(
   owner: User.last,
   vehicle_type: "Vaisseau spatial",
   total_seats: 7,
   summary: "Han Solo's smuggler's ship. With it you can help the rebels fight",
-  address: "75, Place de la Madeleine, 75012 PARIS",
+  address: "75 Place de la Madeleine, 75012 PARIS",
   price_per_day: 3_000_000,
   name: "Mileninum Flacon"
 )
@@ -87,13 +88,13 @@ mileninum_flacon.save!
 
 puts "Done"
 puts 'Create vehicle3'
-
+sleep 1
 privatejet = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 3,
   summary: "A luxuary jet",
-  address: "73, rue Bonneterie, 25200 MontbÉliard",
+  address: "73 rue Bonneterie, 25200 Montbéliard",
   price_per_day: 15_000,
   name: "Jet 100 2.0"
 )
@@ -102,30 +103,14 @@ privatejet.photo.attach(io: file, filename: 'privatejet.jpg', content_type: 'ima
 privatejet.save!
 
 puts "Done"
-puts 'Create vehicle4'
-
-davinci = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "Old technology",
-  total_seats: 1,
-  summary: "A bird machine, designed by Leonardo Da Vinci",
-  address: "46, rue Grande Fusterie, 19100 Brive-la-gaillarde",
-  price_per_day: 100,
-  name: "Da Vinci"
-)
-file = File.open(Rails.root.join('db/fixtures/vehicles/davinci.jpg'))
-davinci.photo.attach(io: file, filename: 'davinci.jpg', content_type: 'image/jpeg')
-davinci.save!
-
-puts "Done"
 puts 'Create vehicle5'
-
+sleep 1
 avion = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 2,
   summary: "A fighter-plane, it can even shoot rockets",
-  address: "15, rue Grande Fusterie, 91220 Brétigny-sur-orge",
+  address: "10 Rue Lucien Bouget , 91220 Brétigny-sur-orge",
   price_per_day: 100_000,
   name: "Plane"
 )
@@ -135,13 +120,13 @@ avion.save!
 
 puts "Done"
 puts 'Create vehicle6'
-
+sleep 1
 baby = Vehicle.new(
   owner: User.first,
   vehicle_type: "Montgolfiere",
   total_seats: 1,
   summary: "A beatiful baby, for people that don't like other's children!",
-  address: "65, rue Saint Germain, 95140  Garges-lès-gonesse",
+  address: "17 Rue Victor Hugo, 95140 Garges-les-gonesse",
   price_per_day: 100_000_000,
   name: "Flying baby"
 )
@@ -151,13 +136,13 @@ baby.save!
 
 puts "Done"
 puts 'Create vehicle7'
-
+sleep 1
 banane_volante = Vehicle.new(
   owner: User.first,
   vehicle_type: "UFO",
   total_seats: 5,
   summary: "A banana for scale",
-  address: "5, cours Jean Jaures, 33100 Bordeaux",
+  address: "45 rue de la Pelouse de Douet, 33100 Bordeaux",
   price_per_day: 5000,
   name: "Flying banana"
 )
@@ -167,13 +152,13 @@ banane_volante.save!
 
 puts "Done"
 puts 'Create vehicle8'
-
+sleep 1
 catapulte = Vehicle.new(
   owner: User.first,
   vehicle_type: "Old technology",
   total_seats: 1,
   summary: "A beatiful catapult, it can launch you far away",
-  address: "53, rue Gustave Eiffel, 42300 Roanne",
+  address: "2 rue Fontquentin, 42300 Roanne",
   price_per_day: 20,
   name: "Catapulte"
 )
@@ -183,13 +168,13 @@ catapulte.save!
 
 puts "Done"
 puts 'Create vehicle9'
-
+sleep 1
 falaise = Vehicle.new(
   owner: User.first,
   vehicle_type: "Natural",
   total_seats: 10_000,
   summary: "Falaise pour vous et vos amis",
-  address: "35, rue Cazade, 93700 Drancy",
+  address: "86 Rue Anatole France, 93700 Drancy",
   price_per_day: 1,
   name: "Falaise"
 )
@@ -199,13 +184,13 @@ falaise.save!
 
 puts "Done"
 puts 'Create vehicle10'
-
+sleep 1
 falcon = Vehicle.new(
   owner: User.first,
   vehicle_type: "Vaisseau spatial",
   total_seats: 5,
   summary: "Starlord's ship, you can crash anywhere",
-  address: "86, rue Beauvau, 13004 Marseille",
+  address: "86 rue Beauvau, 13004 Marseille",
   price_per_day: 100_000,
   name: "Falcon"
 )
@@ -215,13 +200,13 @@ falcon.save!
 
 puts "Done"
 puts 'Create vehicle10'
-
+sleep 1
 helico = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 5,
   summary: "A beatiful copter",
-  address: "95, Rue Roussy, 45000 Orléans",
+  address: "95 Rue Roussy, 45000 Orléans",
   price_per_day: 500,
   name: "Helico"
 )
@@ -231,13 +216,13 @@ helico.save!
 
 puts "Done"
 puts 'Create vehicle11'
-
+sleep 1
 heliporteur = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 5,
   summary: "A beatiful Heliporter",
-  address: "10, Rue Roussy, 84100 Orange",
+  address: "700 Rue Albin Durand, 84100 Orange",
   price_per_day: 200,
   name: "Heliporter"
 )
@@ -247,13 +232,13 @@ heliporteur.save!
 
 puts "Done"
 puts 'Create vehicle12'
-
+sleep 1
 hover_bike = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 1,
   summary: "A beatiful hoverbike for one!",
-  address: "24, Avenue des Pr’es, 95160 Montmorency",
+  address: "15 Rue Charles Lecocq, 75015 Paris",
   price_per_day: 200,
   name: "Hover Bike"
 )
@@ -263,13 +248,13 @@ hover_bike.save!
 
 puts "Done"
 puts 'Create vehicle13'
-
+sleep 1
 imperial_destroyer = Vehicle.new(
   owner: User.first,
   vehicle_type: "Vaisseau spatial",
   total_seats: 5000,
   summary: "An imperial destroyer where you can find Darth Vader",
-  address: "2, Place Charles de Gaulle, 59650 Villeneuve-d’ascq",
+  address: "157 Rue Jules Guesde, 59650 Villeneuve-d’ascq",
   price_per_day: 100_000_000,
   name: "Imperial Destroyer"
 )
@@ -279,13 +264,13 @@ imperial_destroyer.save!
 
 puts "Done"
 puts 'Create vehicle14'
-
+sleep 1
 moto_volante = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 2,
   summary: "A flying bike that will take you anywhere",
-  address: "60, route de Lyon, 94200 Ivry-sur-seine",
+  address: "15 Rue Ledru Rollin, 94200 Ivry-sur-seine",
   price_per_day: 1_000,
   name: "Moto Volante"
 )
@@ -295,13 +280,13 @@ moto_volante.save!
 
 puts "Done"
 puts 'Create vehicle15'
-
+sleep 1
 nyan_cat = Vehicle.new(
   owner: User.first,
   vehicle_type: "Mythical creature",
   total_seats: 2,
   summary: "A cat that has rainbow stuck to him",
-  address: "84, Avenue des Pr’es, 03100 Montluçon",
+  address: "16 Rue du Pavé, 03100 Montluçon",
   price_per_day: 300,
   name: "Nyan cat"
 )
@@ -311,13 +296,13 @@ nyan_cat.save!
 
 puts "Done"
 puts 'Create vehicle16'
-
+sleep 1
 pegasus = Vehicle.new(
   owner: User.first,
   vehicle_type: "Mythical creature",
   total_seats: 2,
   summary: "A horse with wings, it can also take you to Olympus",
-  address: "43, rue Charles Corbeau, 91000 Évry",
+  address: "3 Rue Lafaurie de Monbadon, 33000 Bordeaux",
   price_per_day: 314,
   name: "Pegasus"
 )
@@ -327,13 +312,13 @@ pegasus.save!
 
 puts "Done"
 puts 'Create vehicle17'
-
+sleep 1
 star_wars = Vehicle.new(
   owner: User.first,
   vehicle_type: "UFO",
   total_seats: 2,
   summary: "An X-wing that can fly you to Dagoba",
-  address: "1, rue des lieutemants Thomazo, 21000 Dijon",
+  address: "14 Rue de l'Espérance, 21000 Dijon",
   price_per_day: 4_000,
   name: "X-wing"
 )
@@ -343,13 +328,13 @@ star_wars.save!
 
 puts "Done"
 puts 'Create vehicle18'
-
+sleep 1
 tapis = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 2,
   summary: "A Carpet that will help you get to Jasmin",
-  address: "66, rue des six frères Ruellan, 95200 Sarcelles",
+  address: "42 Rue Pierre Brossolette, 95200 Sarcelles",
   price_per_day: 7_000,
   name: "Carpet"
 )
@@ -359,13 +344,13 @@ tapis.save!
 
 puts "Done"
 puts 'Create vehicle19'
-
+sleep 1
 tie_fighter = Vehicle.new(
   owner: User.first,
   vehicle_type: "UFO",
   total_seats: 2,
   summary: "A Tie-fighter that will help you fight the rebels",
-  address: "45, Rue de Strasbourg, 92140 Clamart",
+  address: "88 Rue de Fleury, 92140 Clamart",
   price_per_day: 1000,
   name: "Tie-Fighter"
 )
@@ -375,13 +360,13 @@ tie_fighter.save!
 
 puts "Done"
 puts 'Create vehicle20'
-
+sleep 1
 velo_volant = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 1,
   summary: "A flying bike that will help you get E.T. home",
-  address: "45, quai Saint-Nicolas, 37000  Tours",
+  address: "19 Rue de la Dolve, 37000 Tours",
   price_per_day: 150,
   name: "Flying bike"
 )
@@ -391,13 +376,13 @@ velo_volant.save!
 
 puts "Done"
 puts 'Create vehicle21'
-
+sleep 1
 voiture_volante = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 7,
   summary: "A flying car, to take you where we don't need roads",
-  address: "10, Passage de la Poule Noire, 44100 Nantes",
+  address: "10 Passage de la Poule Noire, 44100 Nantes",
   price_per_day: 2_500,
   name: "Flying car"
 )
@@ -407,19 +392,36 @@ voiture_volante.save!
 
 puts "Done"
 puts 'Create vehicle22'
-
+sleep 1
 wingsuit = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 1,
   summary: "A wingsuit for one",
-  address: "8, Avenue Montaigne, 75008 Paris",
+  address: "8 Avenue Montaigne, 75008 Paris",
   price_per_day: 100,
   name: "Wingsuit"
 )
 file = File.open(Rails.root.join('db/fixtures/vehicles/wingsuit.jpg'))
 wingsuit.photo.attach(io: file, filename: 'wingsuit.jpg', content_type: 'image/jpeg')
 wingsuit.save!
+
+puts "Done"
+puts 'Create vehicle4'
+sleep 1
+
+davinci = Vehicle.new(
+  owner: User.first,
+  vehicle_type: "Old technology",
+  total_seats: 1,
+  summary: "A bird machine, designed by Leonardo Da Vinci",
+  address: "15 Rue de Strasbourg, 44000 Nantes",
+  price_per_day: 100,
+  name: "Da Vinci"
+)
+file = File.open(Rails.root.join('db/fixtures/vehicles/davinci.jpg'))
+davinci.photo.attach(io: file, filename: 'davinci.jpg', content_type: 'image/jpeg')
+davinci.save!
 
 puts "Done"
 puts 'Create renting1'

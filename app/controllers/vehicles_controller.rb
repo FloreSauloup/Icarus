@@ -3,11 +3,20 @@ class VehiclesController < ApplicationController
 
   def index
     @vehicles = Vehicle.all
+
+    @markers = @vehicles.geocoded.map do |vehicle|
+      {
+        lat: vehicle.latitude,
+        lng: vehicle.longitude
+      }
+    end
   end
 
   def show
     @renting = Renting.new
   end
+
+
 
   private
 
