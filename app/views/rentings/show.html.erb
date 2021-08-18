@@ -1,0 +1,21 @@
+<div class="header_show">
+  <h1><%= @renting.vehicle.name%></h1>
+</div>
+<div class="container-show">
+  <div class="picture">
+      <%= image_tag @renting.vehicle.photo, width: 500 %>
+      💰<%= @renting.vehicle.price_per_day %> per day
+      <p>🛸<%= @renting.vehicle.vehicle_type %>.<br><%= @renting.vehicle.summary %>
+  </div>
+
+  <div class="content_show">
+    <p>📍 <%= @renting.vehicle.address %> || 💺 <%= @renting.vehicle.total_seats %></p>
+  </div>
+
+  <div class="content_show">
+    <h2>Renter's name <%= @renting.user_first_name%> <%= @renting.user_last_name%></h2>
+    <p>Renter's email <%= @renting.user_email%></p>
+    <p>Renter's phone <%= @renting.user_phone%></p>
+    <p>Renter's description <%= @renting.user_description%></p>
+  </div>
+</div>

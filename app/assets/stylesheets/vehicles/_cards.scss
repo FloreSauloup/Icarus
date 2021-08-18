@@ -5,6 +5,7 @@
   width: 100vw;
 }
 
+
 .card-vehicles {
   min-width: 50vw;
 }
@@ -60,11 +61,11 @@ text-decoration: none;
   font-weight: bold;
 }
 
-.top-right{
+.bottom-center{
   position: absolute;
   text-align: center;
-  top: 0px;
-  right: 10px;
+  top: 88%;
+  width: 100%;
 }
 
 // Smallest device

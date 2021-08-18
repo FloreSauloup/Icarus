@@ -10,6 +10,7 @@
     </div>
     <% @vehicles.each do |vehicle| %>
         <div class="card-category">
+
       <%= link_to vehicle_path(vehicle) do %>
           <%= image_tag vehicle.photo, class: "card-img"%>
       <% end %>
@@ -20,6 +21,7 @@
             <div class="flex-item">
               $<%= vehicle.price_per_day/1000 %> k
             </div>
+
           </div>
         </div>
     <% end %>
