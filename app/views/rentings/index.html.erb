@@ -1,0 +1,30 @@
+<div class="header-index">
+  <h1>Here are all your renting requests</h1>
+</div>
+
+<div>
+  <h2>Renting requests:</h2>
+</div>
+
+<div class="container my-3">
+  <div class="cards">
+    <% @rentings.each do |renting| %>
+        <div class="card-category">
+      <%= link_to vehicle_path(renting) do %>
+          <%= image_tag renting.vehicle.photo, class: "card-img"%>
+      <% end %>
+          <div class="top-right">
+              <span class="label-vehicle-type"><%= renting.vehicle.vehicle_name.upcase %></span>
+              <br>
+              $<%= vehicle.price_per_day/1000 %> k
+          </div>
+          <div class="top-right">
+              <span class="label-renter"><%= renting.user.user_first_name.upcase %></span>
+              <br>
+              <span class="label-renter"><%= renting.user.user_last_name.upcase %></span>
+              $<%= vehicle.price_per_day/1000 %> k
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
