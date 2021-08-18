@@ -72,7 +72,7 @@ etoile_noire.save!
 
 puts "Done"
 puts 'Create vehicle2'
-mileninum_flacon = Vehicle.new(
+milenium_flacon = Vehicle.new(
   owner: User.last,
   vehicle_type: "Vaisseau spatial",
   total_seats: 7,
