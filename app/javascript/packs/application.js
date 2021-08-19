@@ -37,3 +37,5 @@ document.addEventListener('turbolinks:load', () => {
   initTotalPrice();
   initFlatpickr();
 })
+
+import "controllers"

@@ -2,7 +2,7 @@ class VehiclesController < ApplicationController
   before_action :set_vehicle, only: [:show]
 
   def index
-    @vehicles = Vehicle.all
+    @vehicles = Vehicle.all.order(:created_at)
 
     @markers = @vehicles.geocoded.map do |vehicle|
       {

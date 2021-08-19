@@ -14,11 +14,11 @@ const initMapbox = () => {
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/light-v10'
+      style: 'mapbox://styles/mapbox/streets-v8'
     });
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
-      new mapboxgl.Marker()
+      new mapboxgl.Marker({ "color": "#2F2FA2" })
       .setLngLat([marker.lng, marker.lat])
       .addTo(map);
     });
