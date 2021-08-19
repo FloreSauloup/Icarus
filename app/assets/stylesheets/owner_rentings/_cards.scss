@@ -1,7 +1,17 @@
+.body {
+  font-family: $manrope;
+}
+.container {
+  font-family: $manrope;
+}
 .all-box {
   display: flex;
-  margin-top: 20px;
+  margin-top: 25px;
   width: 100vw;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  color: #2F2FA2;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-family: $manrope;
 
 
 }
@@ -18,9 +28,15 @@
 
 .text-guest-box {
   width: 25vw;
+  text-align: center;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 .text-price-box {
   width: 25vw;
+  text-align: center;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .text-button-box {
@@ -29,85 +45,35 @@
 }
 
 .text-bloc {
-  width: 70vw;
   display: flex;
-
+  width: 70vw;
 }
-
+.text-title .title-infos .prix-title .bouton-title {
+  text-align: center;
+}
 
 .header {
-  width: 100%;
-  margin: 20px;
+  width: 80vw;
   display: flex;
+  text-align: center;
+  margin-top: 20px;
+  font-family: $manrope;
 }
-
-
-.photo {
-}
-
-
-
-
-
-
-
-
-.button {
-
-}
-
-
-.title-carte {
-}
-
-.text-title {
-}
-
-.title-infos{
-}
-
-.text-qte {
-}
-
-
-.prix {
-}
-
-.prix-text {
-}
-
-.Action-bouton {
-}
-
-
-
-
-
-
 
 .h4-box {
+  font-family: $manrope;
+  font-weight: bold;
 }
 
 .p-box {
+  font-family: $manrope;
+  color: black;
+
 }
 
-
-
-
-
-
-
-.cards-product {
-}
-
-.card-product-img {
-}
-
-.card-product-infos h2 {
-}
-
-.card-product-infos p {
-}
-
-.card-products .card-product-img .card-product-infos {
+.map-index {
+  min-width: 50vw;
+  min-height: 100vh;
+  top: 0px;
+  border-left: 8px solid #2F2FA2;
 }

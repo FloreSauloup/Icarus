@@ -16,11 +16,11 @@
     <div class="title-infos flex-item">
       <span class="text-qte">Informations</span>
     </div>
-    <div class="prix flex-item">
+    <div class="prix-title flex-item">
       <span class="prix-text">Prix</span>
     </div>
-    <div class="Action-bouton flex-item">
-      <span class="prix-text">Bouton</span>
+    <div class="bouton-title flex-item">
+      <span class="bouton-text">Bouton</span>
     </div>
   </div>
 </div>
@@ -33,15 +33,25 @@
 
     <div class="text-bloc">
       <div class="text-guest-box bg-success">
-        <h4 class=h4-box>Guest <%= renting.user.first_name%> <%= renting.user.last_name%></h4>
-        <p class="p-box"><%= renting.user.email%></p>
-        <p class="p-box"><%= renting.user.phone_number%></p>
-        <p class="p-box"><%= renting.user.description%>duct description with <strong>relevant info</strong> only.</p>
+        <h4 class=h4-box>👨🏻‍💻 <%= renting.user.first_name%> <%= renting.user.last_name%></h4>
+        <p class="p-box">📧 <%= renting.user.email%></p>
+        <p class="p-box">☎ <%= renting.user.phone_number%></p>
+        <p class="p-box">❝ <%= renting.user.description%> ❝</p>
       </div>
 
       <div class="text-price-box bg-secondary">
-        <h4 class=h4-box> 💰<%= renting.vehicle.price_per_day %>/ day
-        <h4 class=h4-box> $<%= renting.total_price %>
+        <h4 class=p-box>  $<%= renting.vehicle.price_per_day %>/ day</h4>
+
+        <p class="p-box"> 📆 <%= renting.total_price / renting.vehicle.price_per_day %> days</p>
+
+        <% if renting.total_price > 10000 %>
+          <h4 class=h4-box> 💵 $<%= renting.total_price / 1000 %> K</h4>
+        <% else %>
+          <h4 class=h4-box> 💵 $<%= renting.total_price %> 💵</h4>
+        <% end %>
+
+
+
       </div>
 
       <div class="text-button-box bg-primary">
@@ -55,3 +65,9 @@
   </div>
 
 <%end%>
+
+<div id="map" class="map-index"
+          style="width: 100%; height: 100vh; position: sticky; top: 59px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+        </div>
