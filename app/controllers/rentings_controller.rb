@@ -1,14 +1,15 @@
 class RentingsController < ApplicationController
   before_action :set_renting, except: [:create, :index]
+  before_action :set_vehicle, only: [:create]
 
   def index
     @rentings = Renting.where(user: current_user)
   end
 
-  def show
-    @renting = Renting.find(params[:id])
-    @vehicle = Vehicle.new
-  end
+  # def show
+  #   @renting = Renting.find(params[:id])
+  #   @vehicle = Vehicle.new
+  # end
 
   def new
     @renting = Renting.new
@@ -17,12 +18,13 @@ class RentingsController < ApplicationController
   def create
     # binding.pry
     @renting = Renting.new(params_renting)
-    @renting.user_id = current_user.id
-    @renting.vehicle = Vehicle.find(params[:vehicle_id])
-    if @renting.save
+    @renting.user = current_user
+    @renting.vehicle = @vehicle
+    @renting.total_price = @renting.total_days * @vehicle.price_per_day
+    if @renting.save!
       redirect_to rentings_path
     else
-      render "vehicles/show/#{params[:vehicle_id]}"
+      render "vehicles/show"
     end
   end
 
@@ -52,7 +54,6 @@ class RentingsController < ApplicationController
 
   def params_renting
     params.require(:renting).permit(
-      :status,
       :total_price,
       :start_date,
       :end_date
@@ -61,5 +62,9 @@ class RentingsController < ApplicationController
 
   def set_renting
     @renting = Renting.find(params[:id])
+  end
+
+  def set_vehicle
+    @vehicle = Vehicle.find(params[:vehicle_id])
   end
 end
