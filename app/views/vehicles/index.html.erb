@@ -6,21 +6,24 @@
 
   <div class="card-vehicles">
     <div class=title_edit>
-      <h1>Outdoor escapades</h1>
+      <h1>Outdoor escapades ✈️</h1>
+      <p>Find all our atypical vehicles to fly to new skies </p>
     </div>
     <% @vehicles.each do |vehicle| %>
         <div class="card-category">
-          <%= link_to vehicle_path(vehicle) do %>
-            <%= image_tag vehicle.photo, class: "card-img"%>
-          <% end %>
+          <div class="inner-card">
+            <%= link_to vehicle_path(vehicle) do %>
+              <% image_tag vehicle.photo, class: "card-img"%>
+            <% end %>
+          </div>
           <div class="bottom-center d-flex justify-content-around" style="top: 75%;">
             <div class="flex-item">
-              <%= vehicle.price_per_day %> $
-              <span class="price-lighter"> <p>per day </p></span>
+              <%# <%= vehicle.price_per_day %>  <!-- $ --> <!-- %> -->
+              <span class="price-lighter">  <!-- <p>per day </p></span> -->
             </div>
             <div class="flex-item">
-              <%= vehicle.vehicle_type %>
-              <span class="price-lighter"> <p>Type </p></span>
+              <%# <%= vehicle.vehicle_type %> <!-- %> -->
+              <span class="price-lighter"> <!-- <p>Type </p></span> -->
             </div>
           </div>
         </div>
@@ -32,7 +35,7 @@
   </div>
 
   <div id="map" class="map-index"
-    style="width: 100%; height: 100vh; position: sticky;"
+    style="width: 100%; height: 100vh; position: sticky; top: 59px;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   </div>
