@@ -31,15 +31,33 @@
   text-align: center;
   padding-right: 10px;
   padding-left: 10px;
+
 }
+
 .text-price-box {
+  position: relative;
   width: 25vw;
   text-align: center;
   padding-right: 10px;
   padding-left: 10px;
 }
+#borderLeft {
+  border-left: 1px solid #2F2FA2;
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 0;
+}
+#borderRight {
+  border-right: 1px solid #2F2FA2;
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: 0;
 
-.text-button-box {
+}
+
+.text-map-box {
   width: 20vw;
 
 }
@@ -52,6 +70,11 @@
   text-align: center;
 }
 
+.button-box {
+
+}
+
+
 .header {
   width: 80vw;
   display: flex;
@@ -63,6 +86,8 @@
 .h4-box {
   font-family: $manrope;
   font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .p-box {
@@ -76,4 +101,66 @@
   min-height: 100vh;
   top: 0px;
   border-left: 8px solid #2F2FA2;
+}
+
+.button-box {
+  margin-top: 20px;
+}
+.button-accept {
+  margin-top: 10px;
+	background-color:transparent;
+	border-radius:28px;
+	border:1px solid #2F2FA2;
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-size:10px;
+	font-weight:bold;
+	padding:10px;
+	text-decoration:none;
+  a {
+    color: black;
+  }
+}
+
+.button-accept:hover {
+	background-color:transparent;
+  color: rgb(0, 255, 0);
+  border-color: rgb(0, 255, 0);
+  text-decoration:none;
+}
+
+.button-accept:active {
+	position:relative;
+	top:1px;
+  text-decoration:none;
+}
+
+
+.button-decline {
+  margin-top: 10px;
+	background-color:transparent;
+	border-radius:28px;
+	border:1px solid #2F2FA2;
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-size:10px;
+	font-weight:bold;
+	padding:10px;
+	text-decoration:none;
+  a {
+    color: black;
+  }
+}
+
+.button-decline:hover {
+	background-color:transparent;
+  color: rgb(255, 29, 29);
+  border-color: rgb(255, 29, 29);
+}
+
+.button-decline:active {
+	position:relative;
+	top:1px;
 }
