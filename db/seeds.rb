@@ -55,8 +55,8 @@ mathis.save!
 
 puts "Done"
 puts 'Create vehicle1'
-sleep 1
-etoile_noire = Vehicle.new(
+
+avion_cargo = Vehicle.new(
   owner: User.last,
   vehicle_type: "UFO",
   total_seats: 120,
@@ -66,14 +66,14 @@ etoile_noire = Vehicle.new(
   name: "Etoile noir"
 )
 
-file = File.open(Rails.root.join('db/fixtures/vehicles/etoile_noire.jpg'))
-etoile_noire.photo.attach(io: file, filename: 'etoile_noire.jpg', content_type: 'image/jpeg')
-etoile_noire.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/avion_cargo.jpg'))
+avion_cargo.photo.attach(io: file, filename: 'avion_cargo.jpg', content_type: 'image/jpeg')
+avion_cargo.save!
 
 puts "Done"
 puts 'Create vehicle2'
-sleep 1
-mileninum_flacon = Vehicle.new(
+
+falcon = Vehicle.new(
   owner: User.last,
   vehicle_type: "Vaisseau spatial",
   total_seats: 7,
@@ -82,14 +82,14 @@ mileninum_flacon = Vehicle.new(
   price_per_day: 3_000_000,
   name: "Mileninum Flacon"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/milenium_falcon.jpg'))
-mileninum_flacon.photo.attach(io: file, filename: 'milenium_falcon.jpg', content_type: 'image/jpeg')
-mileninum_flacon.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/falcon.jpg'))
+falcon.photo.attach(io: file, filename: 'falcon.jpg', content_type: 'image/jpeg')
+falcon.save!
 
 puts "Done"
 puts 'Create vehicle3'
-sleep 1
-privatejet = Vehicle.new(
+
+avion_de_chasse = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 3,
@@ -98,14 +98,14 @@ privatejet = Vehicle.new(
   price_per_day: 15_000,
   name: "Jet 100 2.0"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/privatejet.jpg'))
-privatejet.photo.attach(io: file, filename: 'privatejet.jpg', content_type: 'image/jpeg')
-privatejet.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/avion_de_chasse.jpg'))
+avion_de_chasse.photo.attach(io: file, filename: 'avion_de_chasse.jpg', content_type: 'image/jpeg')
+avion_de_chasse.save!
 
 puts "Done"
 puts 'Create vehicle5'
-sleep 1
-avion = Vehicle.new(
+
+avion_jet = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 2,
@@ -114,13 +114,13 @@ avion = Vehicle.new(
   price_per_day: 100_000,
   name: "Plane"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/avion.jpg'))
-avion.photo.attach(io: file, filename: 'avion.jpg', content_type: 'image/jpeg')
-avion.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/avion_jet.jpg'))
+avion_jet.photo.attach(io: file, filename: 'avion_jet.jpg', content_type: 'image/jpeg')
+avion_jet.save!
 
 puts "Done"
 puts 'Create vehicle6'
-sleep 1
+
 baby = Vehicle.new(
   owner: User.first,
   vehicle_type: "Montgolfiere",
@@ -136,7 +136,7 @@ baby.save!
 
 puts "Done"
 puts 'Create vehicle7'
-sleep 1
+
 banane_volante = Vehicle.new(
   owner: User.first,
   vehicle_type: "UFO",
@@ -152,23 +152,23 @@ banane_volante.save!
 
 puts "Done"
 puts 'Create vehicle8'
-sleep 1
-catapulte = Vehicle.new(
+
+et_velo = Vehicle.new(
   owner: User.first,
   vehicle_type: "Old technology",
   total_seats: 1,
   summary: "A beatiful catapult, it can launch you far away",
   address: "2 rue Fontquentin, 42300 Roanne",
   price_per_day: 20,
-  name: "Catapulte"
+  name: "Et_velo"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/catapulte.jpg'))
-catapulte.photo.attach(io: file, filename: 'catapulte.jpg', content_type: 'image/jpeg')
-catapulte.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/et_velo.jpg'))
+et_velo.photo.attach(io: file, filename: 'et_velo.jpg', content_type: 'image/jpeg')
+et_velo.save!
 
 puts "Done"
 puts 'Create vehicle9'
-sleep 1
+
 falaise = Vehicle.new(
   owner: User.first,
   vehicle_type: "Natural",
@@ -183,24 +183,11 @@ falaise.photo.attach(io: file, filename: 'falaise.jpg', content_type: 'image/jpe
 falaise.save!
 
 puts "Done"
-puts 'Create vehicle10'
-sleep 1
-falcon = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "Vaisseau spatial",
-  total_seats: 5,
-  summary: "Starlord's ship, you can crash anywhere",
-  address: "86 rue Beauvau, 13004 Marseille",
-  price_per_day: 100_000,
-  name: "Falcon"
-)
-file = File.open(Rails.root.join('db/fixtures/vehicles/falcon.jpg'))
-falcon.photo.attach(io: file, filename: 'falcon.jpg', content_type: 'image/jpeg')
-falcon.save!
 
-puts "Done"
+
+
 puts 'Create vehicle10'
-sleep 1
+
 helico = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
@@ -216,7 +203,7 @@ helico.save!
 
 puts "Done"
 puts 'Create vehicle11'
-sleep 1
+
 heliporteur = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
@@ -232,8 +219,8 @@ heliporteur.save!
 
 puts "Done"
 puts 'Create vehicle12'
-sleep 1
-hover_bike = Vehicle.new(
+
+navette = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 1,
@@ -242,14 +229,14 @@ hover_bike = Vehicle.new(
   price_per_day: 200,
   name: "Hover Bike"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/hover_bike.jpg'))
-hover_bike.photo.attach(io: file, filename: 'hover_bike.jpg', content_type: 'image/jpeg')
-hover_bike.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/navette.jpg'))
+navette.photo.attach(io: file, filename: 'navette.jpg', content_type: 'image/jpeg')
+navette.save!
 
 puts "Done"
 puts 'Create vehicle13'
-sleep 1
-imperial_destroyer = Vehicle.new(
+
+black_bird = Vehicle.new(
   owner: User.first,
   vehicle_type: "Vaisseau spatial",
   total_seats: 5000,
@@ -258,13 +245,13 @@ imperial_destroyer = Vehicle.new(
   price_per_day: 100_000_000,
   name: "Imperial Destroyer"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/imperial_destroyer.jpg'))
-imperial_destroyer.photo.attach(io: file, filename: 'imperial_destroyer.jpg', content_type: 'image/jpeg')
-imperial_destroyer.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/black_bird.jpg'))
+black_bird.photo.attach(io: file, filename: 'black_bird.jpg', content_type: 'image/jpeg')
+black_bird.save!
 
 puts "Done"
 puts 'Create vehicle14'
-sleep 1
+
 moto_volante = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
@@ -280,7 +267,7 @@ moto_volante.save!
 
 puts "Done"
 puts 'Create vehicle15'
-sleep 1
+
 nyan_cat = Vehicle.new(
   owner: User.first,
   vehicle_type: "Mythical creature",
@@ -296,7 +283,7 @@ nyan_cat.save!
 
 puts "Done"
 puts 'Create vehicle16'
-sleep 1
+
 pegasus = Vehicle.new(
   owner: User.first,
   vehicle_type: "Mythical creature",
@@ -312,8 +299,8 @@ pegasus.save!
 
 puts "Done"
 puts 'Create vehicle17'
-sleep 1
-star_wars = Vehicle.new(
+
+ufo = Vehicle.new(
   owner: User.first,
   vehicle_type: "UFO",
   total_seats: 2,
@@ -322,14 +309,14 @@ star_wars = Vehicle.new(
   price_per_day: 4_000,
   name: "X-wing"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/star_wars_20.jpg'))
-star_wars.photo.attach(io: file, filename: 'star_wars_20.jpg', content_type: 'image/jpeg')
-star_wars.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/ufo.jpg'))
+ufo.photo.attach(io: file, filename: 'ufo.jpg', content_type: 'image/jpeg')
+ufo.save!
 
 puts "Done"
 puts 'Create vehicle18'
-sleep 1
-tapis = Vehicle.new(
+
+dragon = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 2,
@@ -338,14 +325,14 @@ tapis = Vehicle.new(
   price_per_day: 7_000,
   name: "Carpet"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/tapis.jpg'))
-tapis.photo.attach(io: file, filename: 'tapis.jpg', content_type: 'image/jpeg')
-tapis.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/dragon.jpg'))
+dragon.photo.attach(io: file, filename: 'dragon.jpg', content_type: 'image/jpeg')
+dragon.save!
 
 puts "Done"
 puts 'Create vehicle19'
-sleep 1
-tie_fighter = Vehicle.new(
+
+moto_volante = Vehicle.new(
   owner: User.first,
   vehicle_type: "UFO",
   total_seats: 2,
@@ -354,14 +341,14 @@ tie_fighter = Vehicle.new(
   price_per_day: 1000,
   name: "Tie-Fighter"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/tie_fighter.jpg'))
-tie_fighter.photo.attach(io: file, filename: 'tie_fighter.jpg', content_type: 'image/jpeg')
-tie_fighter.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/moto_volante.jpg'))
+moto_volante.photo.attach(io: file, filename: 'moto_volante.jpg', content_type: 'image/jpeg')
+moto_volante.save!
 
 puts "Done"
 puts 'Create vehicle20'
-sleep 1
-velo_volant = Vehicle.new(
+
+parapante = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 1,
@@ -370,14 +357,14 @@ velo_volant = Vehicle.new(
   price_per_day: 150,
   name: "Flying bike"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/velo_volant.jpg'))
-velo_volant.photo.attach(io: file, filename: 'velo_volant.jpg', content_type: 'image/jpeg')
-velo_volant.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/parapante.jpg'))
+parapante.photo.attach(io: file, filename: 'parapante.jpg', content_type: 'image/jpeg')
+parapante.save!
 
 puts "Done"
 puts 'Create vehicle21'
-sleep 1
-voiture_volante = Vehicle.new(
+
+balet = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
   total_seats: 7,
@@ -386,13 +373,13 @@ voiture_volante = Vehicle.new(
   price_per_day: 2_500,
   name: "Flying car"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/voiture_volante.jpg'))
-voiture_volante.photo.attach(io: file, filename: 'voiture_volante.jpg', content_type: 'image/jpeg')
-voiture_volante.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/balet.jpg'))
+balet.photo.attach(io: file, filename: 'balet.jpg', content_type: 'image/jpeg')
+balet.save!
 
 puts "Done"
 puts 'Create vehicle22'
-sleep 1
+
 wingsuit = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
@@ -407,10 +394,9 @@ wingsuit.photo.attach(io: file, filename: 'wingsuit.jpg', content_type: 'image/j
 wingsuit.save!
 
 puts "Done"
-puts 'Create vehicle4'
-sleep 1
+puts 'Create vehicle 23'
 
-davinci = Vehicle.new(
+creature = Vehicle.new(
   owner: User.first,
   vehicle_type: "Old technology",
   total_seats: 1,
@@ -419,9 +405,9 @@ davinci = Vehicle.new(
   price_per_day: 100,
   name: "Da Vinci"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/davinci.jpg'))
-davinci.photo.attach(io: file, filename: 'davinci.jpg', content_type: 'image/jpeg')
-davinci.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/creature.jpg'))
+creature.photo.attach(io: file, filename: 'creature.jpg', content_type: 'image/jpeg')
+creature.save!
 
 puts "Done"
 puts 'Create renting1'
@@ -430,10 +416,10 @@ start_date = Time.new(2021, 10, 31)
 end_date = Time.new(2021, 11, 31)
 Renting.create!(
   user: User.last,
-  vehicle: davinci,
+  vehicle: black_bird,
   start_date: start_date,
   end_date: end_date,
-  total_price: (end_date - start_date) * davinci.price_per_day,
+  total_price: (end_date - start_date) * black_bird.price_per_day,
   status: "rented"
 )
 puts "Done"
@@ -444,9 +430,9 @@ end_date = Time.new(2021, 12, 10)
 
 Renting.create!(
   user: User.last,
-  vehicle: Vehicle.first,
+  vehicle: avion_jet,
   start_date: start_date,
   end_date: end_date,
-  total_price: (end_date - start_date) * etoile_noire.price_per_day,
+  total_price: (end_date - start_date) * avion_jet.price_per_day,
   status: "in attempt"
 )
