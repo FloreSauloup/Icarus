@@ -20,7 +20,7 @@ nans = User.new(
   description: "i'm student"
 )
 file = File.open(Rails.root.join('db/fixtures/users/nans.jpg'))
-nans.avatar.attach(io: file, filename: 'nans.jpg', content_type: 'image/jpeg')
+nans.avatar.attach(io: file, filename: 'nans.jpg', content_type: 'image/jpg')
 nans.save!
 
 puts "Done"
@@ -35,7 +35,7 @@ simon = User.new(
   description: "i'm pdg"
 )
 file = File.open(Rails.root.join('db/fixtures/users/simon.jpg'))
-simon.avatar.attach(io: file, filename: 'simon.jpg', content_type: 'image/jpeg')
+simon.avatar.attach(io: file, filename: 'simon.jpg', content_type: 'image/jpg')
 simon.save!
 
 puts "Done"
@@ -50,12 +50,27 @@ mathis = User.new(
   description: "i'm freelance"
 )
 file = File.open(Rails.root.join('db/fixtures/users/mathis.jpg'))
-mathis.avatar.attach(io: file, filename: 'mathis.jpg', content_type: 'image/jpeg')
+mathis.avatar.attach(io: file, filename: 'mathis.jpg', content_type: 'image/jpg')
 mathis.save!
 
 puts "Done"
 puts 'Create vehicle1'
 
+<<<<<<< HEAD
+nimbus = Vehicle.new(
+  owner: mathis,
+  vehicle_type: "Unusual",
+  total_seats: 1,
+  summary: "A broom that will take you to the moon!",
+  address: "58, rue Pierre De Coubertin, 31100 TOULOUSE",
+  price_per_day: 100,
+  name: "Nimbus 2000"
+)
+
+file = File.open(Rails.root.join('db/fixtures/vehicles/nimbus.png'))
+nimbus.photo.attach(io: file, filename: 'nimbus.png', content_type: 'image/png')
+nimbus.save!
+=======
 avion_cargo = Vehicle.new(
   owner: User.last,
   vehicle_type: "UFO",
@@ -69,35 +84,82 @@ avion_cargo = Vehicle.new(
 file = File.open(Rails.root.join('db/fixtures/vehicles/avion_cargo.jpg'))
 avion_cargo.photo.attach(io: file, filename: 'avion_cargo.jpg', content_type: 'image/jpeg')
 avion_cargo.save!
+>>>>>>> f7a1edeed2bda29ef29c420c0be3011db36bb014
 
 puts "Done"
 puts 'Create vehicle2'
 
+<<<<<<< HEAD
+milenium_falcon = Vehicle.new(
+  owner: mathis,
+  vehicle_type: "Futuristic",
+=======
 falcon = Vehicle.new(
   owner: User.last,
   vehicle_type: "Vaisseau spatial",
+>>>>>>> f7a1edeed2bda29ef29c420c0be3011db36bb014
   total_seats: 7,
   summary: "Han Solo's smuggler's ship. With it you can help the rebels fight",
-  address: "75 Place de la Madeleine, 75012 PARIS",
-  price_per_day: 3_000_000,
-  name: "Mileninum Flacon"
+  address: "75, Place de la Madeleine, 75012 PARIS",
+  price_per_day: 5_000,
+  name: "Milenium Falcon"
 )
+<<<<<<< HEAD
+file = File.open(Rails.root.join('db/fixtures/vehicles/faucon.png'))
+milenium_falcon.photo.attach(io: file, filename: 'faucon.png', content_type: 'image/png')
+milenium_falcon.save!
+=======
 file = File.open(Rails.root.join('db/fixtures/vehicles/falcon.jpg'))
 falcon.photo.attach(io: file, filename: 'falcon.jpg', content_type: 'image/jpeg')
 falcon.save!
+>>>>>>> f7a1edeed2bda29ef29c420c0be3011db36bb014
 
 puts "Done"
 puts 'Create vehicle3'
 
+<<<<<<< HEAD
+jet = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Contemporary",
+=======
 avion_de_chasse = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
+>>>>>>> f7a1edeed2bda29ef29c420c0be3011db36bb014
   total_seats: 3,
   summary: "A luxuary jet",
   address: "73 rue Bonneterie, 25200 Montbéliard",
   price_per_day: 15_000,
   name: "Jet 100 2.0"
 )
+<<<<<<< HEAD
+file = File.open(Rails.root.join('db/fixtures/vehicles/jet.png'))
+jet.photo.attach(io: file, filename: 'jet.png', content_type: 'image/png')
+jet.save!
+
+puts "Done"
+puts 'Create vehicle4'
+
+drone = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Futuristic",
+  total_seats: 2,
+  summary: "A bird machine, designed by Elon Musk. It can help you attack Talibans!",
+  address: "46, rue Grande Fusterie, 19100 Brive-la-gaillarde",
+  price_per_day: 500,
+  name: "Drone"
+)
+file = File.open(Rails.root.join('db/fixtures/vehicles/drone.png'))
+drone.photo.attach(io: file, filename: 'drone.png', content_type: 'image/png')
+drone.save!
+
+puts "Done"
+puts 'Create vehicle5'
+sleep 1
+avion = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Contemporary",
+=======
 file = File.open(Rails.root.join('db/fixtures/vehicles/avion_de_chasse.jpg'))
 avion_de_chasse.photo.attach(io: file, filename: 'avion_de_chasse.jpg', content_type: 'image/jpeg')
 avion_de_chasse.save!
@@ -108,51 +170,94 @@ puts 'Create vehicle5'
 avion_jet = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
+>>>>>>> f7a1edeed2bda29ef29c420c0be3011db36bb014
   total_seats: 2,
-  summary: "A fighter-plane, it can even shoot rockets",
-  address: "10 Rue Lucien Bouget , 91220 Brétigny-sur-orge",
-  price_per_day: 100_000,
+  summary: "A plane, it can even shoot rockets",
+  address: "15, rue Grande Fusterie, 91220 Brétigny-sur-orge",
+  price_per_day: 150,
   name: "Plane"
 )
+<<<<<<< HEAD
+file = File.open(Rails.root.join('db/fixtures/vehicles/avion.png'))
+avion.photo.attach(io: file, filename: 'avion.png', content_type: 'image/png')
+avion.save!
+=======
 file = File.open(Rails.root.join('db/fixtures/vehicles/avion_jet.jpg'))
 avion_jet.photo.attach(io: file, filename: 'avion_jet.jpg', content_type: 'image/jpeg')
 avion_jet.save!
+>>>>>>> f7a1edeed2bda29ef29c420c0be3011db36bb014
 
 puts "Done"
 puts 'Create vehicle6'
 
 baby = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "Montgolfiere",
+  owner: nans,
+  vehicle_type: "Unusual",
   total_seats: 1,
   summary: "A beatiful baby, for people that don't like other's children!",
-  address: "17 Rue Victor Hugo, 95140 Garges-les-gonesse",
-  price_per_day: 100_000_000,
+  address: "65, rue Saint Germain, 95140  Garges-lès-gonesse",
+  price_per_day: 50,
   name: "Flying baby"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/baby.jpg'))
-baby.photo.attach(io: file, filename: 'baby.jpg', content_type: 'image/jpeg')
+file = File.open(Rails.root.join('db/fixtures/vehicles/enfant.png'))
+baby.photo.attach(io: file, filename: 'enfant.png', content_type: 'image/png')
 baby.save!
 
 puts "Done"
 puts 'Create vehicle7'
 
+<<<<<<< HEAD
+banane = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Unusual",
+=======
 banane_volante = Vehicle.new(
   owner: User.first,
   vehicle_type: "UFO",
+>>>>>>> f7a1edeed2bda29ef29c420c0be3011db36bb014
   total_seats: 5,
   summary: "A banana for scale",
   address: "45 rue de la Pelouse de Douet, 33100 Bordeaux",
   price_per_day: 5000,
   name: "Flying banana"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/banane_volante.jpg'))
-banane_volante.photo.attach(io: file, filename: 'banane_volante.jpg', content_type: 'image/jpeg')
-banane_volante.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/banane.png'))
+banane.photo.attach(io: file, filename: 'banane.png', content_type: 'image/png')
+banane.save!
 
 puts "Done"
 puts 'Create vehicle8'
 
+<<<<<<< HEAD
+tapis = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Antique",
+  total_seats: 2,
+  summary: "A beatiful carpet, it take you under the stars!",
+  address: "53, rue Gustave Eiffel, 42300 Roanne",
+  price_per_day: 50,
+  name: "Flying carpet"
+)
+file = File.open(Rails.root.join('db/fixtures/vehicles/tapis.png'))
+tapis.photo.attach(io: file, filename: 'tapis.png', content_type: 'image/png')
+tapis.save!
+
+puts "Done"
+puts 'Create vehicle9'
+
+ovnis = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Futuristic",
+  total_seats: 3,
+  summary: "On m'appelle l'Ovni! Le J c'est le S!",
+  address: "35, rue Cazade, 93700 Drancy",
+  price_per_day: 6_000,
+  name: "Ovni"
+)
+file = File.open(Rails.root.join('db/fixtures/vehicles/ovnis.png'))
+ovnis.photo.attach(io: file, filename: 'ovnis.png', content_type: 'image/png')
+ovnis.save!
+=======
 et_velo = Vehicle.new(
   owner: User.first,
   vehicle_type: "Old technology",
@@ -183,231 +288,160 @@ falaise.photo.attach(io: file, filename: 'falaise.jpg', content_type: 'image/jpe
 falaise.save!
 
 puts "Done"
+>>>>>>> f7a1edeed2bda29ef29c420c0be3011db36bb014
 
 
 
 puts 'Create vehicle10'
 
+<<<<<<< HEAD
+montgolfiere = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Contemporary",
+=======
 helico = Vehicle.new(
   owner: User.first,
   vehicle_type: "Avion",
+>>>>>>> f7a1edeed2bda29ef29c420c0be3011db36bb014
   total_seats: 5,
-  summary: "A beatiful copter",
-  address: "95 Rue Roussy, 45000 Orléans",
-  price_per_day: 500,
-  name: "Helico"
+  summary: "A baloon to the moon",
+  address: "86, rue Beauvau, 13004 Marseille",
+  price_per_day: 100,
+  name: "Montgolfiere"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/helico.jpg'))
-helico.photo.attach(io: file, filename: 'helico.jpg', content_type: 'image/jpeg')
-helico.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/montgolfiere.png'))
+montgolfiere.photo.attach(io: file, filename: 'montgolfiere.png', content_type: 'image/png')
+montgolfiere.save!
 
 puts "Done"
 puts 'Create vehicle11'
 
-heliporteur = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "Avion",
-  total_seats: 5,
-  summary: "A beatiful Heliporter",
-  address: "700 Rue Albin Durand, 84100 Orange",
-  price_per_day: 200,
-  name: "Heliporter"
+jetpack = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Extreme",
+  total_seats: 1,
+  summary: "A one man's job, to be in GTA!",
+  address: "95, Rue Roussy, 45000 Orléans",
+  price_per_day: 500,
+  name: "Jetpack"
+
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/heliporteur.jpg'))
-heliporteur.photo.attach(io: file, filename: 'heliporteur.jpg', content_type: 'image/jpeg')
-heliporteur.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/jetpack.png'))
+jetpack.photo.attach(io: file, filename: 'jetpack.png', content_type: 'image/png')
+jetpack.save!
 
 puts "Done"
 puts 'Create vehicle12'
 
-navette = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "Avion",
-  total_seats: 1,
-  summary: "A beatiful hoverbike for one!",
-  address: "15 Rue Charles Lecocq, 75015 Paris",
+zeppelin = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Antique",
+  total_seats: 5,
+  summary: "A zepplin, that will make you hot!",
+  address: "10, Rue Roussy, 84100 Orange",
+
   price_per_day: 200,
-  name: "Hover Bike"
+  name: "Hindenburg"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/navette.jpg'))
-navette.photo.attach(io: file, filename: 'navette.jpg', content_type: 'image/jpeg')
-navette.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/zeppelin.png'))
+zeppelin.photo.attach(io: file, filename: 'zeppelin.png', content_type: 'image/png')
+zeppelin.save!
 
 puts "Done"
 puts 'Create vehicle13'
 
-black_bird = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "Vaisseau spatial",
-  total_seats: 5000,
-  summary: "An imperial destroyer where you can find Darth Vader",
-  address: "157 Rue Jules Guesde, 59650 Villeneuve-d’ascq",
-  price_per_day: 100_000_000,
-  name: "Imperial Destroyer"
+pegasus = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Antique",
+  total_seats: 1,
+  summary: "A beatiful flying horse for one!",
+  address: "24, Avenue des Pr’es, 95160 Montmorency",
+  price_per_day: 200,
+  name: "Pegasus"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/black_bird.jpg'))
-black_bird.photo.attach(io: file, filename: 'black_bird.jpg', content_type: 'image/jpeg')
-black_bird.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/pegasus.png'))
+pegasus.photo.attach(io: file, filename: 'pegasus.png', content_type: 'image/png')
+pegasus.save!
 
 puts "Done"
 puts 'Create vehicle14'
 
-moto_volante = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "Avion",
-  total_seats: 2,
-  summary: "A flying bike that will take you anywhere",
-  address: "15 Rue Ledru Rollin, 94200 Ivry-sur-seine",
-  price_per_day: 1_000,
-  name: "Moto Volante"
+cerf = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Contemporary",
+  total_seats: 1,
+  summary: "To fly high as a kite!",
+  address: "2, Place Charles de Gaulle, 59650 Villeneuve-d’ascq",
+  price_per_day: 10,
+  name: "Flying kite"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/moto_volante.jpg'))
-moto_volante.photo.attach(io: file, filename: 'moto_volante.jpg', content_type: 'image/jpeg')
-moto_volante.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/cerf.png'))
+cerf.photo.attach(io: file, filename: 'cerf.png', content_type: 'image/png')
+cerf.save!
 
 puts "Done"
 puts 'Create vehicle15'
 
-nyan_cat = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "Mythical creature",
+nyancat = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Futuristic",
   total_seats: 2,
   summary: "A cat that has rainbow stuck to him",
   address: "16 Rue du Pavé, 03100 Montluçon",
   price_per_day: 300,
   name: "Nyan cat"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/nyan_cat.jpg'))
-nyan_cat.photo.attach(io: file, filename: 'nyan_cat.jpg', content_type: 'image/jpeg')
-nyan_cat.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/nyancat.png'))
+nyancat.photo.attach(io: file, filename: 'nyancat.png', content_type: 'image/png')
+nyancat.save!
 
 puts "Done"
 puts 'Create vehicle16'
 
-pegasus = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "Mythical creature",
+ulm = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Contemporary",
   total_seats: 2,
-  summary: "A horse with wings, it can also take you to Olympus",
-  address: "3 Rue Lafaurie de Monbadon, 33000 Bordeaux",
-  price_per_day: 314,
-  name: "Pegasus"
+  summary: "An UltraLight Aviation",
+  address: "1, rue des lieutemants Thomazo, 21000 Dijon",
+  price_per_day: 250,
+  name: "Ulm"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/pegasus.jpg'))
-pegasus.photo.attach(io: file, filename: 'pegasus.jpg', content_type: 'image/jpeg')
-pegasus.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/ulm.png'))
+ulm.photo.attach(io: file, filename: 'ulm.png', content_type: 'image/png')
+ulm.save!
 
 puts "Done"
 puts 'Create vehicle17'
 
-ufo = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "UFO",
-  total_seats: 2,
-  summary: "An X-wing that can fly you to Dagoba",
-  address: "14 Rue de l'Espérance, 21000 Dijon",
-  price_per_day: 4_000,
-  name: "X-wing"
+wingsuit = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Extreme",
+  total_seats: 1,
+  summary: "Feel like a bird",
+  address: "16, rue de Périgord, 31000 Toulouse",
+  price_per_day: 350,
+  name: "Wingsuit"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/ufo.jpg'))
-ufo.photo.attach(io: file, filename: 'ufo.jpg', content_type: 'image/jpeg')
-ufo.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/wingsuit.png'))
+wingsuit.photo.attach(io: file, filename: 'wingsuit.png', content_type: 'image/png')
+wingsuit.save!
 
 puts "Done"
 puts 'Create vehicle18'
 
-dragon = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "Avion",
-  total_seats: 2,
-  summary: "A Carpet that will help you get to Jasmin",
-  address: "42 Rue Pierre Brossolette, 95200 Sarcelles",
-  price_per_day: 7_000,
-  name: "Carpet"
+helico = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Contemporary",
+  total_seats: 6,
+  summary: "An Helicopter to fly as a family",
+  address: "13, rue de la Bournelle, 44690 La Haye Fouassiere",
+  price_per_day: 250,
+  name: "Helico"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/dragon.jpg'))
-dragon.photo.attach(io: file, filename: 'dragon.jpg', content_type: 'image/jpeg')
-dragon.save!
-
-puts "Done"
-puts 'Create vehicle19'
-
-moto_volante = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "UFO",
-  total_seats: 2,
-  summary: "A Tie-fighter that will help you fight the rebels",
-  address: "88 Rue de Fleury, 92140 Clamart",
-  price_per_day: 1000,
-  name: "Tie-Fighter"
-)
-file = File.open(Rails.root.join('db/fixtures/vehicles/moto_volante.jpg'))
-moto_volante.photo.attach(io: file, filename: 'moto_volante.jpg', content_type: 'image/jpeg')
-moto_volante.save!
-
-puts "Done"
-puts 'Create vehicle20'
-
-parapante = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "Avion",
-  total_seats: 1,
-  summary: "A flying bike that will help you get E.T. home",
-  address: "19 Rue de la Dolve, 37000 Tours",
-  price_per_day: 150,
-  name: "Flying bike"
-)
-file = File.open(Rails.root.join('db/fixtures/vehicles/parapante.jpg'))
-parapante.photo.attach(io: file, filename: 'parapante.jpg', content_type: 'image/jpeg')
-parapante.save!
-
-puts "Done"
-puts 'Create vehicle21'
-
-balet = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "Avion",
-  total_seats: 7,
-  summary: "A flying car, to take you where we don't need roads",
-  address: "10 Passage de la Poule Noire, 44100 Nantes",
-  price_per_day: 2_500,
-  name: "Flying car"
-)
-file = File.open(Rails.root.join('db/fixtures/vehicles/balet.jpg'))
-balet.photo.attach(io: file, filename: 'balet.jpg', content_type: 'image/jpeg')
-balet.save!
-
-puts "Done"
-puts 'Create vehicle22'
-
-wingsuit = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "Avion",
-  total_seats: 1,
-  summary: "A wingsuit for one",
-  address: "8 Avenue Montaigne, 75008 Paris",
-  price_per_day: 100,
-  name: "Wingsuit"
-)
-file = File.open(Rails.root.join('db/fixtures/vehicles/wingsuit.jpg'))
-wingsuit.photo.attach(io: file, filename: 'wingsuit.jpg', content_type: 'image/jpeg')
-wingsuit.save!
-
-puts "Done"
-puts 'Create vehicle 23'
-
-creature = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "Old technology",
-  total_seats: 1,
-  summary: "A bird machine, designed by Leonardo Da Vinci",
-  address: "15 Rue de Strasbourg, 44000 Nantes",
-  price_per_day: 100,
-  name: "Da Vinci"
-)
-file = File.open(Rails.root.join('db/fixtures/vehicles/creature.jpg'))
-creature.photo.attach(io: file, filename: 'creature.jpg', content_type: 'image/jpeg')
-creature.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/helico.png'))
+helico.photo.attach(io: file, filename: 'helico.png', content_type: 'image/png')
+helico.save!
 
 puts "Done"
 puts 'Create renting1'
@@ -415,11 +449,11 @@ puts 'Create renting1'
 start_date = Time.new(2021, 10, 31)
 end_date = Time.new(2021, 11, 31)
 Renting.create!(
-  user: User.last,
-  vehicle: black_bird,
+  user: simon,
+  vehicle: nimbus,
   start_date: start_date,
   end_date: end_date,
-  total_price: (end_date - start_date) * black_bird.price_per_day,
+  total_price: (end_date - start_date) * nimbus.price_per_day,
   status: "rented"
 )
 puts "Done"
@@ -428,11 +462,12 @@ puts 'Create renting2'
 start_date = Time.new(2021, 11, 27)
 end_date = Time.new(2021, 12, 10)
 
+
 Renting.create!(
-  user: User.last,
-  vehicle: avion_jet,
+  user: simon,
+  vehicle: helico,
   start_date: start_date,
   end_date: end_date,
-  total_price: (end_date - start_date) * avion_jet.price_per_day,
+  total_price: (end_date - start_date) * helico.price_per_day,
   status: "in attempt"
 )
