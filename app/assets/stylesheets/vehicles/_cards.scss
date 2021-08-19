@@ -113,6 +113,15 @@ text-decoration: none;
   }
 }
 
+.title_edit h1 {
+  margin-left: 30px;
+  padding-top: 50px;
+}
+
+.title_edit p {
+  margin-top: 0px;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .vehicles {

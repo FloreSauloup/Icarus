@@ -53,38 +53,37 @@ file = File.open(Rails.root.join('db/fixtures/users/mathis.jpg'))
 mathis.avatar.attach(io: file, filename: 'mathis.jpg', content_type: 'image/jpg')
 mathis.save!
 
-puts "Done"
 puts 'Create vehicle1'
 
-nimbus = Vehicle.new(
-  owner: mathis,
-  vehicle_type: "Unusual",
-  total_seats: 1,
-  summary: "A broom that will take you to the moon!",
-  address: "58, rue Pierre De Coubertin, 31100 TOULOUSE",
+montgolfiere = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Contemporary",
+  total_seats: 5,
+  summary: "A baloon to the moon",
+  address: "86, rue Beauvau, 13004 Marseille",
   price_per_day: 100,
-  name: "Nimbus 2000"
+  name: "Montgolfiere"
 )
-
-file = File.open(Rails.root.join('db/fixtures/vehicles/nimbus.png'))
-nimbus.photo.attach(io: file, filename: 'nimbus.png', content_type: 'image/png')
-nimbus.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/montgolfiere.png'))
+montgolfiere.photo.attach(io: file, filename: 'montgolfiere.png', content_type: 'image/png')
+montgolfiere.save!
 
 puts "Done"
 puts 'Create vehicle2'
 
-milenium_falcon = Vehicle.new(
-  owner: mathis,
-  vehicle_type: "Futuristic",
-  total_seats: 7,
-  summary: "Han Solo's smuggler's ship. With it you can help the rebels fight",
-  address: "75, Place de la Madeleine, 75012 PARIS",
-  price_per_day: 5_000,
-  name: "Milenium Falcon"
+zeppelin = Vehicle.new(
+  owner: nans,
+  vehicle_type: "Antique",
+  total_seats: 5,
+  summary: "A zepplin, that will make you hot!",
+  address: "10, Rue Roussy, 84100 Orange",
+
+  price_per_day: 200,
+  name: "Hindenburg"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/faucon.png'))
-milenium_falcon.photo.attach(io: file, filename: 'faucon.png', content_type: 'image/png')
-milenium_falcon.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/zeppelin.png'))
+zeppelin.photo.attach(io: file, filename: 'zeppelin.png', content_type: 'image/png')
+zeppelin.save!
 
 puts "Done"
 puts 'Create vehicle3'
@@ -198,21 +197,24 @@ file = File.open(Rails.root.join('db/fixtures/vehicles/ovnis.png'))
 ovnis.photo.attach(io: file, filename: 'ovnis.png', content_type: 'image/png')
 ovnis.save!
 
-
+puts "Done"
 puts 'Create vehicle10'
 
-montgolfiere = Vehicle.new(
-  owner: nans,
-  vehicle_type: "Contemporary",
-  total_seats: 5,
-  summary: "A baloon to the moon",
-  address: "86, rue Beauvau, 13004 Marseille",
+nimbus = Vehicle.new(
+  owner: mathis,
+  vehicle_type: "Unusual",
+  total_seats: 1,
+  summary: "A broom that will take you to the moon!",
+  address: "58, rue Pierre De Coubertin, 31100 TOULOUSE",
   price_per_day: 100,
-  name: "Montgolfiere"
+  name: "Nimbus 2000"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/montgolfiere.png'))
-montgolfiere.photo.attach(io: file, filename: 'montgolfiere.png', content_type: 'image/png')
-montgolfiere.save!
+
+file = File.open(Rails.root.join('db/fixtures/vehicles/nimbus.png'))
+nimbus.photo.attach(io: file, filename: 'nimbus.png', content_type: 'image/png')
+nimbus.save!
+
+
 
 puts "Done"
 puts 'Create vehicle11'
@@ -234,19 +236,18 @@ jetpack.save!
 puts "Done"
 puts 'Create vehicle12'
 
-zeppelin = Vehicle.new(
-  owner: nans,
-  vehicle_type: "Antique",
-  total_seats: 5,
-  summary: "A zepplin, that will make you hot!",
-  address: "10, Rue Roussy, 84100 Orange",
-
-  price_per_day: 200,
-  name: "Hindenburg"
+milenium_falcon = Vehicle.new(
+  owner: mathis,
+  vehicle_type: "Futuristic",
+  total_seats: 7,
+  summary: "Han Solo's smuggler's ship. With it you can help the rebels fight",
+  address: "75, Place de la Madeleine, 75012 PARIS",
+  price_per_day: 5_000,
+  name: "Milenium Falcon"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/zeppelin.png'))
-zeppelin.photo.attach(io: file, filename: 'zeppelin.png', content_type: 'image/png')
-zeppelin.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/faucon.png'))
+milenium_falcon.photo.attach(io: file, filename: 'faucon.png', content_type: 'image/png')
+milenium_falcon.save!
 
 puts "Done"
 puts 'Create vehicle13'
