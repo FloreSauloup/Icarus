@@ -6,26 +6,53 @@
   <h2>Renting requests:</h2>
 </div>
 
-<div class="container my-3">
-  <div class="cards-renting">
-    <% @rentings.each do |renting| %>
-        <div class="card-renting-category">
-          <div class="renting-top-right">
-              <span class="label-vehicle-name"><%= renting.vehicle.name.upcase %></span>
-              <br>
-              $<%= renting.total_price/1000 %> k
-          </div>
-          <div class="renting-top-left">
-            <h2>Renter's name <%= renting.user.first_name%> <%= renting.user.last_name%></h2>
-            <p>Renter's email <%= renting.user.email%></p>
-            <p>Renter's phone <%= renting.user.phone_number%></p>
-            <p>Renter's description "<%= renting.user.description%>"</p>
-          </div>
-          <div class="renting-bottom-right">
-            <%= link_to "✅", accept_owner_renting_path(renting), method: :patch, class: "btn btn-success" %>
-            <%= link_to "❌", decline_owner_renting_path(renting), method: :patch, class: "btn btn-danger" %>
-          </div>
-        </div>
-    <% end %>
+
+
+<div class= "container">
+  <div class="header d-flex justify-content-between">
+    <div class="title-carte flex-item">
+      <span class="text-title">Article</span>
+    </div>
+    <div class=" title-infos flex-item">
+      <span class="text-qte">QTÉ</span>
+    </div>
+    <div class="prix flex-item">
+      <span class="prix-text">Prix</span>
+    </div>
+    <div class="Action-bouton flex-item">
+      <span class="prix-text">Bouton</span>
+    </div>
   </div>
+  <% @rentings.each do |renting| %>
+
+    <div class="text-box">
+      <div class="card-elements-blox bg-warning">
+        <div class="photo">
+          <span class="img-card"><%= image_tag renting.vehicle.photo %></span>
+        </div>
+      </div>
+
+
+      <div class="text-guest-box bg-success">
+        <h4 class=h4-box>Guest <%= renting.user.first_name%> <%= renting.user.last_name%></h4>
+        <p class="p-box"><%= renting.user.email%></p>
+        <p class="p-box"><%= renting.user.phone_number%></p>
+        <p class="p-box"><%= renting.user.description%>duct description with <strong>relevant info</strong> only.</p>
+      </div>
+
+      <div class="text-price-box bg-secondary">
+        <h4 class=h4-box> 💰<%= renting.vehicle.price_per_day %>/ day
+        <h4 class=h4-box> $<%= renting.total_price %>
+      </div>
+
+      <div class="text-button-box bg-primary">
+        <div class="button">
+          <%= link_to "✅", accept_owner_renting_path(renting), method: :patch %>
+          <%= link_to "❌", decline_owner_renting_path(renting), method: :patch %>
+        </div>
+      </div>
+
+    </div>
+
+  <%end%>
 </div>
