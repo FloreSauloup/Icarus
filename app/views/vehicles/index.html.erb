@@ -14,7 +14,15 @@
           <div  class="inner-card"
                 data-vehicle-target="card"
                 data-action="mouseover->vehicle#display">
-            <div class="inner-card-hover hidden" data-action="mouseout->vehicle#hide"></div>
+            <div class="inner-card-hover hidden" data-action="mouseout->vehicle#hide">
+            <div class='text-hover'>
+              <%= vehicle.name %>
+              <br>
+              <%= vehicle.vehicle_type %>
+              <br>
+              <%= vehicle.price_per_day %>
+            </div>
+            </div>
             <%= link_to vehicle_path(vehicle) do %>
               <% image_tag vehicle.photo, class: "card-img"%>
             <% end %>
