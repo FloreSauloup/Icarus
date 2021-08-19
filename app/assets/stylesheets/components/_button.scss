@@ -1,5 +1,15 @@
-.blue-btn:hover {
-background-color: white;
-color: #2F2FA2;
-border: 2px solid #2F2FA2;
+.btn-flat {
+  color: white;
+  padding: 14px 30px 14px 30px;
+  border-radius: 4px;
+  background: #2F2FA2;
+  font-weight: bold;
+}
+
+.btn-flat:hover {
+
+  background-color: #B0B0E8;
+  color: white;
+  transform: scale(1.02);
+  transition: 0.2s ease-in-out;
 }
