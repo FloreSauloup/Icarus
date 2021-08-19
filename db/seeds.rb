@@ -462,6 +462,7 @@ puts 'Create renting2'
 start_date = Time.new(2021, 11, 27)
 end_date = Time.new(2021, 12, 10)
 
+
 Renting.create!(
   user: simon,
   vehicle: helico,
