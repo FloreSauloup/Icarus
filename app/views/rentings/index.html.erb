@@ -16,10 +16,11 @@
               $<%= renting.total_price/1000 %> k
           </div>
           <div class="renting-top-left">
-            <h2>Renter's name <%= renting.user.first_name%> <%= renting.user.last_name%></h2>
-            <p>Renter's email <%= renting.user.email%></p>
-            <p>Renter's phone <%= renting.user.phone_number%></p>
-            <p>Renter's description "<%= renting.user.description%>"</p>
+          Who's
+            <%= renting.user.first_name%> <%= renting.user.last_name%>
+            Renter's email <%= renting.user.email%>
+            Renter's phone <%= renting.user.phone_number%>
+            Renter's description "<%= renting.user.description%>"
           </div>
         </div>
     <% end %>
