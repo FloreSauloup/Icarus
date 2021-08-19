@@ -16,17 +16,17 @@
 }
 
 .login {
-  color: #2F2FA2;
+  color: #2F2FA2 !important;
+  font-weight: bold;
+  padding: 6px;
+
 }
 
 .nav-link.signup {
   padding: 6px;
-  color: white;
+  color: white !important;
   background-color: #2F2FA2;
   border-radius: 4px;
-}
-
-.nav-link.signup {
- padding-top: auto;
- padding-bottom: auto;
+  padding-top: auto;
+  padding-bottom: auto;
 }
