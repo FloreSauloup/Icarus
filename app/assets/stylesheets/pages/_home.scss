@@ -1,13 +1,13 @@
 // Specific CSS for your home-page
 
 body {
-  font-family: Helvetica;
+  font-family: $manrope;
   background-color: white;
 }
 
 h1 {
   text-align: center;
-  font-family: $headers-font;
+  font-family: $manrope;
   font-weight: bold;
 }
 
@@ -121,4 +121,8 @@ img {
 .action-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.body-wraper {
+  margin-top: 59px;
 }

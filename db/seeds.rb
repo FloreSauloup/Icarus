@@ -57,7 +57,7 @@ puts "Done"
 puts 'Create vehicle1'
 
 nimbus = Vehicle.new(
-  owner: User.last,
+  owner: mathis,
   vehicle_type: "Unusual",
   total_seats: 1,
   summary: "A broom that will take you to the moon!",
@@ -72,8 +72,9 @@ nimbus.save!
 
 puts "Done"
 puts 'Create vehicle2'
+
 milenium_falcon = Vehicle.new(
-  owner: User.last,
+  owner: mathis,
   vehicle_type: "Futuristic",
   total_seats: 7,
   summary: "Han Solo's smuggler's ship. With it you can help the rebels fight",
@@ -81,19 +82,19 @@ milenium_falcon = Vehicle.new(
   price_per_day: 5_000,
   name: "Milenium Falcon"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/falcon.png'))
-milenium_falcon.photo.attach(io: file, filename: 'falcon.png', content_type: 'image/png')
+file = File.open(Rails.root.join('db/fixtures/vehicles/faucon.png'))
+milenium_falcon.photo.attach(io: file, filename: 'faucon.png', content_type: 'image/png')
 milenium_falcon.save!
 
 puts "Done"
 puts 'Create vehicle3'
 
 jet = Vehicle.new(
-  owner: User.first,
+  owner: nans,
   vehicle_type: "Contemporary",
   total_seats: 3,
   summary: "A luxuary jet",
-  address: "73, rue Bonneterie, 25200 MontbÉliard",
+  address: "73 rue Bonneterie, 25200 Montbéliard",
   price_per_day: 15_000,
   name: "Jet 100 2.0"
 )
@@ -105,7 +106,7 @@ puts "Done"
 puts 'Create vehicle4'
 
 drone = Vehicle.new(
-  owner: User.first,
+  owner: nans,
   vehicle_type: "Futuristic",
   total_seats: 2,
   summary: "A bird machine, designed by Elon Musk. It can help you attack Talibans!",
@@ -119,9 +120,9 @@ drone.save!
 
 puts "Done"
 puts 'Create vehicle5'
-
+sleep 1
 avion = Vehicle.new(
-  owner: User.first,
+  owner: nans,
   vehicle_type: "Contemporary",
   total_seats: 2,
   summary: "A plane, it can even shoot rockets",
@@ -135,9 +136,9 @@ avion.save!
 
 puts "Done"
 puts 'Create vehicle6'
-
+sleep 1
 baby = Vehicle.new(
-  owner: User.first,
+  owner: nans,
   vehicle_type: "Unusual",
   total_seats: 1,
   summary: "A beatiful baby, for people that don't like other's children!",
@@ -153,11 +154,11 @@ puts "Done"
 puts 'Create vehicle7'
 
 banane = Vehicle.new(
-  owner: User.first,
+  owner: nans,
   vehicle_type: "Unusual",
   total_seats: 5,
   summary: "A banana for scale",
-  address: "5, cours Jean Jaures, 33100 Bordeaux",
+  address: "45 rue de la Pelouse de Douet, 33100 Bordeaux",
   price_per_day: 5000,
   name: "Flying banana"
 )
@@ -169,7 +170,7 @@ puts "Done"
 puts 'Create vehicle8'
 
 tapis = Vehicle.new(
-  owner: User.first,
+  owner: nans,
   vehicle_type: "Antique",
   total_seats: 2,
   summary: "A beatiful carpet, it take you under the stars!",
@@ -184,8 +185,8 @@ tapis.save!
 puts "Done"
 puts 'Create vehicle9'
 
-ovni = Vehicle.new(
-  owner: User.first,
+ovnis = Vehicle.new(
+  owner: nans,
   vehicle_type: "Futuristic",
   total_seats: 3,
   summary: "On m'appelle l'Ovni! Le J c'est le S!",
@@ -193,15 +194,15 @@ ovni = Vehicle.new(
   price_per_day: 6_000,
   name: "Ovni"
 )
-file = File.open(Rails.root.join('db/fixtures/vehicles/ovni.png'))
-ovni.photo.attach(io: file, filename: 'ovni.png', content_type: 'image/png')
-ovni.save!
+file = File.open(Rails.root.join('db/fixtures/vehicles/ovnis.png'))
+ovnis.photo.attach(io: file, filename: 'ovnis.png', content_type: 'image/png')
+ovnis.save!
 
 puts "Done"
 puts 'Create vehicle10'
 
 montgolfiere = Vehicle.new(
-  owner: User.first,
+  owner: nans,
   vehicle_type: "Contemporary",
   total_seats: 5,
   summary: "A baloon to the moon",
@@ -217,7 +218,7 @@ puts "Done"
 puts 'Create vehicle11'
 
 jetpack = Vehicle.new(
-  owner: User.first,
+  owner: nans,
   vehicle_type: "Extreme",
   total_seats: 1,
   summary: "A one man's job, to be in GTA!",
@@ -233,7 +234,7 @@ puts "Done"
 puts 'Create vehicle12'
 
 zeppelin = Vehicle.new(
-  owner: User.first,
+  owner: nans,
   vehicle_type: "Antique",
   total_seats: 5,
   summary: "A zepplin, that will make you hot!",
@@ -249,7 +250,7 @@ puts "Done"
 puts 'Create vehicle13'
 
 pegasus = Vehicle.new(
-  owner: User.first,
+  owner: nans,
   vehicle_type: "Antique",
   total_seats: 1,
   summary: "A beatiful flying horse for one!",
@@ -265,7 +266,7 @@ puts "Done"
 puts 'Create vehicle14'
 
 cerf = Vehicle.new(
-  owner: User.first,
+  owner: nans,
   vehicle_type: "Contemporary",
   total_seats: 1,
   summary: "To fly high as a kite!",
@@ -281,11 +282,11 @@ puts "Done"
 puts 'Create vehicle15'
 
 nyancat = Vehicle.new(
-  owner: User.first,
+  owner: nans,
   vehicle_type: "Futuristic",
   total_seats: 2,
   summary: "A cat that has rainbow stuck to him",
-  address: "84, Avenue des Pr’es, 03100 Montluçon",
+  address: "16 Rue du Pavé, 03100 Montluçon",
   price_per_day: 300,
   name: "Nyan cat"
 )
@@ -297,7 +298,7 @@ puts "Done"
 puts 'Create vehicle16'
 
 ulm = Vehicle.new(
-  owner: User.first,
+  owner: nans,
   vehicle_type: "Contemporary",
   total_seats: 2,
   summary: "An UltraLight Aviation",
@@ -313,8 +314,8 @@ puts "Done"
 puts 'Create vehicle17'
 
 wingsuit = Vehicle.new(
-  owner: User.first,
-  vehicle_type: "Extrem",
+  owner: nans,
+  vehicle_type: "Extreme",
   total_seats: 1,
   summary: "Feel like a bird",
   address: "16, rue de Périgord, 31000 Toulouse",
@@ -329,7 +330,7 @@ puts "Done"
 puts 'Create vehicle18'
 
 helico = Vehicle.new(
-  owner: User.first,
+  owner: nans,
   vehicle_type: "Contemporary",
   total_seats: 6,
   summary: "An Helicopter to fly as a family",
