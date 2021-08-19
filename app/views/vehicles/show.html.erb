@@ -31,9 +31,10 @@
     <p><%= @vehicle.summary %></p>
     <br>
     <div class="form-renting">
-      <%= simple_form_for @renting do |f| %>
+      <%= simple_form_for [@vehicle, @renting] do |f| %>
         <%= f.input :start_date %>
         <%= f.input :end_date %>
+        <%= f.input :total_price %>  <%# remplacer input par hidden_field  pour le rendre invisible%>
         <%= f.button :submit, "Rent the" + " "+@vehicle.name , class: "btn-submit btn-flat" %>
       <% end %>
     </div>
