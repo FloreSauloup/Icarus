@@ -5,25 +5,29 @@
 
 
   <div class="card-vehicles">
-    <div>
-    <h1>Outdoor escapades</h1>
+    <div class=title_edit>
+      <h1>Outdoor escapades</h1>
     </div>
     <% @vehicles.each do |vehicle| %>
         <div class="card-category">
-
-      <%= link_to vehicle_path(vehicle) do %>
-          <%= image_tag vehicle.photo, class: "card-img"%>
-      <% end %>
-          <div class="bottom-center d-flex justify-content-around">
+          <%= link_to vehicle_path(vehicle) do %>
+            <%= image_tag vehicle.photo, class: "card-img"%>
+          <% end %>
+          <div class="bottom-center d-flex justify-content-around" style="top: 75%;">
             <div class="flex-item">
-              <span class="label-vehicle-type"><%= vehicle.vehicle_type.upcase %></span>
+              <%= vehicle.price_per_day %> $
+              <span class="price-lighter"> <p>per day </p></span>
             </div>
             <div class="flex-item">
-              $<%= vehicle.price_per_day/1000 %> k
+              <%= vehicle.vehicle_type %>
+              <span class="price-lighter"> <p>Type </p></span>
             </div>
-
           </div>
         </div>
+          <div></div>
+          <div style="margin-top: 24px; margin-bottom: 4px;">
+            <div class="bottom_line"></div>
+          </div>
     <% end %>
   </div>
 
