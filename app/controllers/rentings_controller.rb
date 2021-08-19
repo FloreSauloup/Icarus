@@ -13,6 +13,10 @@ class RentingsController < ApplicationController
     @renting.destroy
   end
 
+  def new
+    Renting.create!(@renting)
+  end
+
   private
 
   def set_renting
