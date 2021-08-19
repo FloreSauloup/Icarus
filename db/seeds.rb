@@ -19,8 +19,8 @@ nans = User.new(
   phone_number: "+33613551000",
   description: "i'm student"
 )
-file = File.open(Rails.root.join('db/fixtures/users/nans.png'))
-nans.avatar.attach(io: file, filename: 'nans.png', content_type: 'image/png')
+file = File.open(Rails.root.join('db/fixtures/users/nans.jpg'))
+nans.avatar.attach(io: file, filename: 'nans.jpg', content_type: 'image/jpg')
 nans.save!
 
 puts "Done"
@@ -34,8 +34,8 @@ simon = User.new(
   phone_number: "+33620401000",
   description: "i'm pdg"
 )
-file = File.open(Rails.root.join('db/fixtures/users/simon.png'))
-simon.avatar.attach(io: file, filename: 'simon.png', content_type: 'image/png')
+file = File.open(Rails.root.join('db/fixtures/users/simon.jpg'))
+simon.avatar.attach(io: file, filename: 'simon.jpg', content_type: 'image/jpg')
 simon.save!
 
 puts "Done"
@@ -49,8 +49,8 @@ mathis = User.new(
   phone_number: "+33612361000",
   description: "i'm freelance"
 )
-file = File.open(Rails.root.join('db/fixtures/users/mathis.png'))
-mathis.avatar.attach(io: file, filename: 'mathis.png', content_type: 'image/png')
+file = File.open(Rails.root.join('db/fixtures/users/mathis.jpg'))
+mathis.avatar.attach(io: file, filename: 'mathis.jpg', content_type: 'image/jpg')
 mathis.save!
 
 puts "Done"
