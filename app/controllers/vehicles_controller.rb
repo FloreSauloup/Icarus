@@ -2,7 +2,7 @@ class VehiclesController < ApplicationController
   before_action :set_vehicle, only: [:show]
 
   def index
-    @vehicles = Vehicle.all
+    @vehicles = Vehicle.all.order(:created_at)
 
     @markers = @vehicles.geocoded.map do |vehicle|
       {
@@ -14,6 +14,13 @@ class VehiclesController < ApplicationController
 
   def show
     @renting = Renting.new
+    @rentings = Renting.where(vehicle_id: @vehicle.id)
+    @rentings_dates = @rentings.map do |renting|
+      {
+        from: renting.start_date,
+        to: renting.end_date
+      }
+    end
   end
 
 

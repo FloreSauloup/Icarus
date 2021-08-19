@@ -5,7 +5,7 @@
       <%= image_tag @vehicle.photo, class: "card-img-show" %>
       <div class="bottom-center d-flex justify-content-around">
         <div class="flex-item">
-          <%= @vehicle.price_per_day %> $
+          <%=@vehicle.price_per_day%> $
           <span class="price-lighter"> <p>per day </p></span>
         </div>
         <div class="flex-item">
@@ -32,9 +32,10 @@
     <br>
     <div class="form-renting">
       <%= simple_form_for [@vehicle, @renting] do |f| %>
-        <%= f.input :start_date %>
-        <%= f.input :end_date %>
-        <%= f.input :total_price %>  <%# remplacer input par hidden_field  pour le rendre invisible%>
+        <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.hidden_field :total_price %>   <%# remplacer input par hidden_field  pour le rendre invisible%>
+        <p data-price-per-day="<%= @vehicle.price_per_day %>" id="total-price">Total : </p>
         <%= f.button :submit, "Rent the" + " "+@vehicle.name , class: "btn-submit btn-flat" %>
       <% end %>
     </div>

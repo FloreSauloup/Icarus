@@ -12,7 +12,7 @@ h1 {
 
 .banner {
   //background-image: url("../assets/images/banner.jpg");
-  background-image: asset-url("banner3.jpg"), linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+  background-image: asset-url("banner3.jpg");
   height: 85vh;
   background-size: cover;
   background-position: center;
@@ -37,17 +37,6 @@ h1 {
   padding-bottom: 7px;
 }
 
-.btn-flat {
-  color: white;
-  padding: 14px 30px 14px 30px;
-  border-radius: 4px;
-  background: #2F2FA2;
-  transition: background 0.3s ease;
-}
-
-.btn-flat:hover {
-
-}
 
 .footer {
   background: #F4F4F4;
@@ -104,6 +93,7 @@ img {
 
 }
 
+
 .card-product p {
   font-size: 18px;
   line-height: 1.4;
@@ -115,6 +105,10 @@ img {
 
 .card-product .card-product-infos {
   padding: 16px;
+  a:hover {
+  color: #2F2FA2;
+  text-decoration: underline;
+  }
 }
 
 .action-container {

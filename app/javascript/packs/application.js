@@ -25,6 +25,8 @@ require("channels")
 // External imports
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
+import { initTotalPrice } from '../plugins/event_listener';
+import { initFlatpickr } from "../plugins/flatpickr";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -32,4 +34,8 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  initTotalPrice();
+  initFlatpickr();
 })
+
+import "controllers"

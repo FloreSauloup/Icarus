@@ -1,7 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  border-bottom: 1px solid #F5F5F5;
   position: fixed;
   top: 0px;
   width: 100vw;
@@ -17,14 +16,17 @@
 }
 
 .login {
-  color: #2F2FA2;
+  color: #2F2FA2 !important;
+  font-weight: bold;
+  padding: 6px;
+
 }
 
-.signup {
+.nav-link.signup {
   padding: 6px;
   color: white !important;
   background-color: #2F2FA2;
   border-radius: 4px;
-  margin-top: auto;
-  margin-bottom: auto;
+  padding-top: auto;
+  padding-bottom: auto;
 }
