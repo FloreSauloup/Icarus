@@ -13,8 +13,8 @@
     <div class="title-carte flex-item">
       <span class="text-title">Article</span>
     </div>
-    <div class=" title-infos flex-item">
-      <span class="text-qte">QTÉ</span>
+    <div class="title-infos flex-item">
+      <span class="text-qte">Informations</span>
     </div>
     <div class="prix flex-item">
       <span class="prix-text">Prix</span>
@@ -23,16 +23,15 @@
       <span class="prix-text">Bouton</span>
     </div>
   </div>
-  <% @rentings.each do |renting| %>
+</div>
+<% @rentings.each do |renting| %>
 
-    <div class="text-box">
-      <div class="card-elements-blox bg-warning">
-        <div class="photo">
-          <span class="img-card"><%= image_tag renting.vehicle.photo %></span>
-        </div>
-      </div>
+  <div class="all-box">
+    <div class="image-bloc bg-warning">
+        <span class="img-card"><%= image_tag renting.vehicle.photo %></span>
+    </div>
 
-
+    <div class="text-bloc">
       <div class="text-guest-box bg-success">
         <h4 class=h4-box>Guest <%= renting.user.first_name%> <%= renting.user.last_name%></h4>
         <p class="p-box"><%= renting.user.email%></p>
@@ -53,6 +52,6 @@
       </div>
 
     </div>
+  </div>
 
-  <%end%>
-</div>
+<%end%>

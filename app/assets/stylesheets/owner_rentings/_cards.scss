@@ -1,13 +1,62 @@
+.all-box {
+  display: flex;
+  margin-top: 20px;
+  width: 100vw;
+
+
+}
+
+.image-bloc {
+  width: 30vw;
+}
+
+.img-card {
+  img {
+  width: 100%;
+  }
+}
+
+.text-guest-box {
+  width: 25vw;
+}
+.text-price-box {
+  width: 25vw;
+}
+
+.text-button-box {
+  width: 20vw;
+
+}
+
+.text-bloc {
+  width: 70vw;
+  display: flex;
+
+}
+
+
 .header {
   width: 100%;
   margin: 20px;
   display: flex;
 }
 
-.text-box {
-  display: flex;
-  margin-top: 20px;
+
+.photo {
 }
+
+
+
+
+
+
+
+
+.button {
+
+}
+
+
 .title-carte {
 }
 
@@ -30,14 +79,9 @@
 .Action-bouton {
 }
 
-.card-elements-blox {
-}
 
-.photo {
-}
-.img-card {
-  background-size: cover;
-}
+
+
 
 
 
@@ -47,15 +91,9 @@
 .p-box {
 }
 
-.text-price-box {
-}
 
-.text-button-box {
-}
 
-.button {
 
-}
 
 
 
