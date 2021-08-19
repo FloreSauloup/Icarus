@@ -1,6 +1,6 @@
 
 
-<div class="container-index">
+<div class="container-index" data-controller="vehicle">
 
 
 
@@ -11,11 +11,20 @@
     </div>
     <% @vehicles.each do |vehicle| %>
         <div class="card-category">
-          <div class="inner-card">
+
+
+
+          <div  class="inner-card"
+                data-vehicle-target="card"
+                data-action="mouseover->vehicle#display">
+            <div class="inner-card-hover hidden" data-action="mouseout->vehicle#hide"></div>
             <%= link_to vehicle_path(vehicle) do %>
               <% image_tag vehicle.photo, class: "card-img"%>
             <% end %>
           </div>
+
+
+
           <div class="bottom-center d-flex justify-content-around" style="top: 75%;">
             <div class="flex-item">
               <%# <%= vehicle.price_per_day %>  <!-- $ --> <!-- %> -->

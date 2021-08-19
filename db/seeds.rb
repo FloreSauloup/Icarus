@@ -60,7 +60,7 @@ montgolfiere = Vehicle.new(
   vehicle_type: "Contemporary",
   total_seats: 5,
   summary: "A baloon to the moon",
-  address: "86, rue Beauvau, 13004 Marseille",
+  address: "23 rue Capitaine Dessemond, 13004 Marseille",
   price_per_day: 100,
   name: "Montgolfiere"
 )
@@ -76,7 +76,7 @@ zeppelin = Vehicle.new(
   vehicle_type: "Antique",
   total_seats: 5,
   summary: "A zepplin, that will make you hot!",
-  address: "10, Rue Roussy, 84100 Orange",
+  address: "9 rue Racine, 44000 Nantes",
 
   price_per_day: 200,
   name: "Hindenburg"
@@ -93,7 +93,7 @@ jet = Vehicle.new(
   vehicle_type: "Contemporary",
   total_seats: 3,
   summary: "A luxuary jet",
-  address: "73 rue Bonneterie, 25200 Montbéliard",
+  address: "1 rue Constantine, 69001 Lyon",
   price_per_day: 15_000,
   name: "Jet 100 2.0"
 )
@@ -109,7 +109,7 @@ drone = Vehicle.new(
   vehicle_type: "Futuristic",
   total_seats: 2,
   summary: "A bird machine, designed by Elon Musk. It can help you attack Talibans!",
-  address: "46, rue Grande Fusterie, 19100 Brive-la-gaillarde",
+  address: "21 rue Méaulens, 62000 Arras",
   price_per_day: 500,
   name: "Drone"
 )
@@ -125,7 +125,7 @@ avion = Vehicle.new(
   vehicle_type: "Contemporary",
   total_seats: 2,
   summary: "A plane, it can even shoot rockets",
-  address: "15, rue Grande Fusterie, 91220 Brétigny-sur-orge",
+  address: "81 rue Blatin, 63000 Clermont-Ferrand",
   price_per_day: 150,
   name: "Plane"
 )
@@ -141,7 +141,7 @@ baby = Vehicle.new(
   vehicle_type: "Unusual",
   total_seats: 1,
   summary: "A beatiful baby, for people that don't like other's children!",
-  address: "65, rue Saint Germain, 95140  Garges-lès-gonesse",
+  address: "10 rue Palissy, 47000 Agen",
   price_per_day: 50,
   name: "Flying baby"
 )
@@ -173,7 +173,7 @@ tapis = Vehicle.new(
   vehicle_type: "Antique",
   total_seats: 2,
   summary: "A beatiful carpet, it take you under the stars!",
-  address: "53, rue Gustave Eiffel, 42300 Roanne",
+  address: "1 rue Antheaume, 76000 Rouen",
   price_per_day: 50,
   name: "Flying carpet"
 )
@@ -189,7 +189,7 @@ ovnis = Vehicle.new(
   vehicle_type: "Futuristic",
   total_seats: 3,
   summary: "On m'appelle l'Ovni! Le J c'est le S!",
-  address: "35, rue Cazade, 93700 Drancy",
+  address: "25 rue Hoche, 87100 Limoges",
   price_per_day: 6_000,
   name: "Ovni"
 )
@@ -205,7 +205,7 @@ nimbus = Vehicle.new(
   vehicle_type: "Unusual",
   total_seats: 1,
   summary: "A broom that will take you to the moon!",
-  address: "58, rue Pierre De Coubertin, 31100 TOULOUSE",
+  address: "12 rue Raymond Cortat, 15000 Aurillac",
   price_per_day: 100,
   name: "Nimbus 2000"
 )
@@ -213,8 +213,6 @@ nimbus = Vehicle.new(
 file = File.open(Rails.root.join('db/fixtures/vehicles/nimbus.png'))
 nimbus.photo.attach(io: file, filename: 'nimbus.png', content_type: 'image/png')
 nimbus.save!
-
-
 
 puts "Done"
 puts 'Create vehicle11'
@@ -224,7 +222,7 @@ jetpack = Vehicle.new(
   vehicle_type: "Extreme",
   total_seats: 1,
   summary: "A one man's job, to be in GTA!",
-  address: "95, Rue Roussy, 45000 Orléans",
+  address: "44 rue Chanzy, 45000 Orléans",
   price_per_day: 500,
   name: "Jetpack"
 
@@ -257,7 +255,7 @@ pegasus = Vehicle.new(
   vehicle_type: "Antique",
   total_seats: 1,
   summary: "A beatiful flying horse for one!",
-  address: "24, Avenue des Pr’es, 95160 Montmorency",
+  address: "1 Rue du Thouron, 06130 Grasse",
   price_per_day: 200,
   name: "Pegasus"
 )
@@ -273,7 +271,7 @@ cerf = Vehicle.new(
   vehicle_type: "Contemporary",
   total_seats: 1,
   summary: "To fly high as a kite!",
-  address: "2, Place Charles de Gaulle, 59650 Villeneuve-d’ascq",
+  address: "10 Rue Emile Zola, 37000 Tours",
   price_per_day: 10,
   name: "Flying kite"
 )
@@ -289,7 +287,7 @@ nyancat = Vehicle.new(
   vehicle_type: "Futuristic",
   total_seats: 2,
   summary: "A cat that has rainbow stuck to him",
-  address: "16 Rue du Pavé, 03100 Montluçon",
+  address: "30 rue de Courcelles, 51100 Reims",
   price_per_day: 300,
   name: "Nyan cat"
 )
@@ -305,7 +303,7 @@ ulm = Vehicle.new(
   vehicle_type: "Contemporary",
   total_seats: 2,
   summary: "An UltraLight Aviation",
-  address: "1, rue des lieutemants Thomazo, 21000 Dijon",
+  address: "26 Rue Odebert, 21000 Dijon",
   price_per_day: 250,
   name: "Ulm"
 )
@@ -321,7 +319,7 @@ wingsuit = Vehicle.new(
   vehicle_type: "Extreme",
   total_seats: 1,
   summary: "Feel like a bird",
-  address: "16, rue de Périgord, 31000 Toulouse",
+  address: "14 rue Serviez, 64000 Pau",
   price_per_day: 350,
   name: "Wingsuit"
 )
@@ -337,7 +335,7 @@ helico = Vehicle.new(
   vehicle_type: "Contemporary",
   total_seats: 6,
   summary: "An Helicopter to fly as a family",
-  address: "13, rue de la Bournelle, 44690 La Haye Fouassiere",
+  address: "34 Rue Voltaire, 29200 Brest",
   price_per_day: 250,
   name: "Helico"
 )
