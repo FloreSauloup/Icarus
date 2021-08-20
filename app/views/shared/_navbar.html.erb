@@ -40,12 +40,12 @@
           <%if current_user.vehicles.size > 0 %>
             <br>
             <p class="dropdown-item-2">New Renting</p>
-            <%= link_to "Rent a new vehicle", owner_rentings_new_path, class: "dropdown-item" %>
+            <%= link_to "Rent a new vehicle", owner_vehicles_new_path, class: "dropdown-item" %>
             <div class="bottom_line"></div>
           <%else%>
             <br>
             <p class="dropdown-item-2">New Renting</p>
-            <%= link_to "Rent your first vehicle", owner_rentings_new_path, class: "dropdown-item" %>
+            <%= link_to "Rent your first vehicle", owner_vehicles_new_path, class: "dropdown-item" %>
             <div class="bottom_line"></div>
           <%end%>
           <p class="dropdown-item-2">Settings</p>
