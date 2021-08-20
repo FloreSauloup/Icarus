@@ -5,10 +5,11 @@
 
 .picture-show {
   display: flex;
-  height: 100vh;
+  height: 100%;
 }
 
 .picture {
+  height: 100%;
   min-width: 70vw;
   position: relative;
   color: whitesmoke;
@@ -16,7 +17,9 @@
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   text-decoration: none;
-
+  p {
+    margin-bottom: 0rem !important
+  }
 }
 
 .content_show {
@@ -27,10 +30,13 @@
   border-top: solid #2F2FA2;
 }
 
+
+
 .card-img-show {
   background-size: cover;
   min-width: 100%;
-  height: auto;
+  height: 80vh;
+
 }
 
 .show-avatar {
