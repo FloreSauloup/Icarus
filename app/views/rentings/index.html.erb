@@ -6,23 +6,68 @@
   <h2>Renting requests:</h2>
 </div>
 
-<div class="container my-3">
-  <div class="cards-renting">
-    <% @rentings.each do |renting| %>
-        <div class="card-renting-category">
-          <div class="renting-top-right">
-              <span class="label-vehicle-name"><%= renting.vehicle.name.upcase %></span>
-              <br>
-              $<%= renting.total_price/1000 %> k
-          </div>
-          <div class="renting-top-left">
-          Who's
-            <%= renting.user.first_name%> <%= renting.user.last_name%>
-            Renter's email <%= renting.user.email%>
-            Renter's phone <%= renting.user.phone_number%>
-            Renter's description "<%= renting.user.description%>"
-          </div>
-        </div>
-    <% end %>
+<div class= "container">
+  <div class="header d-flex justify-content-between">
+    <div class="title-carte flex-item">
+      <span class="text-title">Your Booking Requests</span>
+    </div>
+    <div class="title-infos flex-item">
+      <span class="text-qte"> Your Informations</span>
+    </div>
+    <div class="prix-title flex-item">
+      <span class="prix-text">Resume</span>
+    </div>
+    <div class="bouton-title flex-item">
+      <span class="bouton-text">Getting There</span>
+    </div>
   </div>
 </div>
+<% @rentings.each do |renting| %>
+
+  <div class="all-box">
+    <div class="image-bloc">
+        <span class="img-card"><%= image_tag renting.vehicle.photo %></span>
+    </div>
+
+    <div class="text-bloc">
+      <div class="text-guest-box ">
+        <h4 class=h4-box>👨🏻‍💻 <%= renting.user.first_name%> <%= renting.user.last_name%></h4>
+        <p class="p-box">📧 <%= renting.user.email%></p>
+        <p class="p-box">☎ <%= renting.user.phone_number%></p>
+        <p class="p-box">❝ <%= renting.user.description%> ❝</p>
+         <p class="p-box"> <strong><%= renting.status%></strong></p>
+
+      </div>
+
+      <div class="text-price-box">
+        <% if renting.total_price > 10000 %>
+          <h4 class=h4-box> 💵 $<%= renting.total_price / 1000 %> K 💵</h4>
+        <% else %>
+          <h4 class=h4-box> 💵 $<%= renting.total_price %> 💵</h4>
+        <% end %>
+        <h4 class=p-box>  $<%= renting.vehicle.price_per_day %>/ day</h4>
+
+        <p class="p-box"> 📆 <%= renting.total_price / renting.vehicle.price_per_day %> days</p>
+        <p class="p-box"> From: <strong><%= renting.start_date %></strong> To: <strong><%= renting.end_date%></strong> </p>
+
+        <div id="borderLeft"></div>
+        <div id="borderRight"></div>
+      </div>
+
+      <div class="text-map-box">
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<%end%>
+
+<div id="map" class="map-index"
+          style="width: 100%; height: 100vh; position: sticky; top: 59px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+        </div>

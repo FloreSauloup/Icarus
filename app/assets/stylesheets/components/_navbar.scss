@@ -30,3 +30,32 @@
   padding-top: auto;
   padding-bottom: auto;
 }
+
+.bottom_line {
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: #2F2FA2;
+width: 103px;
+margin-right: 25px;
+margin-left: 25px;
+}
+
+.dropdown-item {
+  font-family: $manrope;
+  font-weight: bold;
+}
+
+.dropdown-item p{
+  font-family: $manrope;
+  font-weight: lighter;
+  color: #2F2FA2;
+}
+
+.dropdown-item-2 {
+  font-family: $manrope;
+  color: #707070;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 0.25rem 1.5rem;
+
+}
