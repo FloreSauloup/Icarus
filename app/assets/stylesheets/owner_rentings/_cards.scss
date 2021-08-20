@@ -8,12 +8,10 @@
   display: flex;
   margin-top: 25px;
   width: 100vw;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+
   color: #2F2FA2;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   font-family: $manrope;
-
-
 }
 
 .image-bloc {
@@ -59,12 +57,38 @@
 
 .text-button-box {
   width: 20vw;
+  text-align: center;
+  padding-right: 10px;
+  padding-left: 10px;
 
 }
 
-.button-box {
+.text-map-box {
+  width: 25vw;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  .map-index-box {
+
+
+
+
+  // border-left: 8px solid #2F2FA2;
+}
+
+.mapboxgl-map {
+  width: 350px;
+  margin-top: 20px;
+  height: 200px;
+}
+}
+
+.min-box {
+ font-size: 10px;
+ color: rgb(73, 73, 73);
 
 }
+
 
 
 .text-bloc {
@@ -105,14 +129,14 @@
   margin-top: 20px;
 }
 .button-accept {
-  margin-top: 10px;
+  margin-top: 15px;
 	background-color:transparent;
 	border-radius:28px;
 	border:1px solid #2F2FA2;
 	display:inline-block;
 	cursor:pointer;
 	color:black;
-	font-size:10px;
+	font-size:15px;
 	font-weight:bold;
 	padding:10px;
 	text-decoration:none;
@@ -136,14 +160,14 @@
 
 
 .button-decline {
-  margin-top: 10px;
+  margin-top: 15px;
 	background-color:transparent;
 	border-radius:28px;
 	border:1px solid #2F2FA2;
 	display:inline-block;
 	cursor:pointer;
 	color:black;
-	font-size:10px;
+	font-size:15px;
 	font-weight:bold;
 	padding:10px;
 	text-decoration:none;
