@@ -1,0 +1,10 @@
+<div class="mapbox-container">
+<%= link_to vehicle_path(vehicle) do %>
+    <div class="mapbox-name">
+      <%= vehicle.name %>
+    </div>
+    <div class="mapbox-img">
+    <%= image_tag vehicle.photo %>
+    </div>
+  <% end %>
+</div>
