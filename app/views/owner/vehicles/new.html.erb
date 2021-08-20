@@ -1,7 +1,8 @@
 
 <div class="container vh-100 d-flex justify-content-center align-items-center">
   <div class="col-6">
-    <h1 class="text-center">Create</h1>
+
+    <h1 class="text-center">Become an Icarus member</h1>
 
     <%= simple_form_for(@vehicle) do |f| %>
       <div class="form-inputs">
@@ -14,9 +15,9 @@
         <%= f.select :vehicle_type, ['Unusual', 'Futuristic', 'Contemporary', 'Antique', 'Extreme']%>
       </div>
 
-      <div class="form-actions d-flex justify-content-center btn btn-primary">
-        <%= f.submit %>
-      </div>
+
+        <%= f.submit 'Submit', class: 'button-accept-2'%>
+
     <% end %>
   </div>
 </div>

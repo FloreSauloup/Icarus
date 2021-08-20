@@ -7,7 +7,8 @@
 .all-box {
   display: flex;
   margin-top: 25px;
-  width: 100vw;
+  width: 97vw;
+  margin-left: 20px;
 
   color: #2F2FA2;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -79,7 +80,7 @@
 .mapboxgl-map {
   width: 350px;
   margin-top: 20px;
-  height: 200px;
+  height: 195px;
 }
 }
 
