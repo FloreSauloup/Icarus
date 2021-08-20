@@ -202,6 +202,24 @@ visibility: hidden;
   border-radius: none !important;
 }
 
+.button-accept-2 {
+  width: 250px;
+  margin-top: 15px;
+	background-color:transparent;
+	border-radius:28px;
+	border:1px solid #2F2FA2;
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-size:15px;
+	font-weight:bold;
+	padding:10px;
+	text-decoration:none;
+  a {
+    color: black;
+  }
+}
+
 
 // END POP UP MAPBOX
 

@@ -1,9 +1,6 @@
 <div class="header-index">
-  <h1>Here are all your renting requests</h1>
-</div>
-
-<div>
-  <h2>Renting requests:</h2>
+  <h1>My Bookings</h1>
+  <h2>Let's see if you got your Icarus vehicle</h2>
 </div>
 
 <div class= "container">
@@ -37,7 +34,7 @@
         <p class="p-box">❝ <%= renting.user.description%> ❝</p>
          <% if renting.status == "Accept" %>
           <h4 class=h4-box text-center> ✅ <strong><%= renting.status%></strong> ✅</h4>
-          <p class="p-box"> 🤩 Let's flying like a Angry Bird 🤩</p>
+          <p class="p-box"> 🤩 Let's flying like an Angry Bird 🤩</p>
         <% elsif renting.status == "Decline" %>
           <h4 class=h4-box text-center> ❌ <strong><%= renting.status%></strong> ❌</h4>
           <p class="p-box"> 🙃 Not your turn ... 🙃</p>
@@ -53,7 +50,7 @@
         <% else %>
           <h4 class=h4-box> 💵 $<%= renting.total_price %> 💵</h4>
         <% end %>
-
+        <p class=min-box>  $<%= renting.vehicle.price_per_day %>/ day</p>
 
         <p class="p-box"> 📆 <%= renting.total_price / renting.vehicle.price_per_day %> days</p>
         <p class="p-box"> Check-in: <strong><%= renting.start_date %></strong> </strong> </p>
