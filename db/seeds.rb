@@ -43,7 +43,7 @@ puts 'Create user3'
 
 mathis = User.new(
   email: "mathis@example.com",
-  password: "password",
+  password: "paassword",
   first_name: "Mathis",
   last_name: "Colabo",
   phone_number: "+33612361000",
