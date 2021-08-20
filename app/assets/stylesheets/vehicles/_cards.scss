@@ -60,15 +60,6 @@ text-decoration: none;
     }
 }
 
-
-// .bottom_line {
-// border-bottom-width: 1px;
-// border-bottom-style: solid;
-// border-bottom-color: #2F2FA2;
-// margin-left: 50px;
-// margin-right: 50px;
-// }
-
 .card-img {
   background-size: cover;
   width: 100%;
@@ -138,6 +129,23 @@ visibility: hidden;
 
 .title_edit p {
   margin-top: v0px;
+}
+
+.text-hover-name {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  opacity: 1;
+}
+
+.text-hover-type {
+  color: white;
+  font-size: 20px;
+}
+
+.text-hover-price {
+  color: white;
+  font-size: 15px;
 }
 
 // Smallest device
