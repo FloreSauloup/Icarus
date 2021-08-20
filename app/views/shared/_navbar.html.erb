@@ -27,13 +27,27 @@
           <div style="margin-top: 24px; margin-bottom: 4px;">
             <div class="bottom_line"></div>
           </div>
-          <br>
-          <p class="dropdown-item-2">Renting</p>
-          <%= link_to "Requests", owner_rentings_path, class: "dropdown-item" %>
-          <div></div>
-          <div style="margin-top: 24px; margin-bottom: 4px;">
+          <%if current_user.vehicles.size > 0 %>
+            <br>
+            <p class="dropdown-item-2">Renting</p>
+            <%= link_to "Requests", owner_rentings_path, class: "dropdown-item" %>
             <div class="bottom_line"></div>
+          <%else%>
+          <%end%>
+          <div style="margin-top: 24px; margin-bottom: 4px;">
+            <div></div>
           </div>
+          <%if current_user.vehicles.size > 0 %>
+            <br>
+            <p class="dropdown-item-2">New Renting</p>
+            <%= link_to "Rent a new vehicle", owner_rentings_new_path, class: "dropdown-item" %>
+            <div class="bottom_line"></div>
+          <%else%>
+            <br>
+            <p class="dropdown-item-2">New Renting</p>
+            <%= link_to "Rent your first vehicle", owner_rentings_new_path, class: "dropdown-item" %>
+            <div class="bottom_line"></div>
+          <%end%>
           <p class="dropdown-item-2">Settings</p>
           <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         </div>
