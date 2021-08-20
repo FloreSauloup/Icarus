@@ -353,7 +353,7 @@ Renting.create!(
   vehicle: nimbus,
   start_date: start_date,
   end_date: end_date,
-  total_price: (end_date - start_date) * nimbus.price_per_day,
+  total_price: ((end_date - start_date) * nimbus.price_per_day)/ 86400,
   status: "rented"
 )
 puts "Done"
@@ -368,6 +368,6 @@ Renting.create!(
   vehicle: helico,
   start_date: start_date,
   end_date: end_date,
-  total_price: (end_date - start_date) * helico.price_per_day,
+  total_price: ((end_date - start_date) * helico.price_per_day)/ 86400,
   status: "in attempt"
 )
