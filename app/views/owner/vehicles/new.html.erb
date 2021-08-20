@@ -4,7 +4,7 @@
 
     <h1 class="text-center">Become an Icarus member</h1>
 
-    <%= simple_form_for(@vehicle) do |f| %>
+    <%= simple_form_for([:owner, @vehicle]) do |f| %>
       <div class="form-inputs">
         <%= f.input :name, required: true, label: "What's the name of your vehicle?" %>
         <%= f.input :address, hint: "Enter the street and city" %>
