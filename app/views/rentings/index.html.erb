@@ -53,6 +53,7 @@
         <% else %>
           <h4 class=h4-box> 💵 $<%= renting.total_price %> 💵</h4>
         <% end %>
+        <p class=min-box>  $<%= renting.vehicle.price_per_day %>/ day</p>
 
 
         <p class="p-box"> 📆 <%= renting.total_price / renting.vehicle.price_per_day %> days</p>

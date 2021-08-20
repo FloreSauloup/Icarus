@@ -129,17 +129,18 @@
   margin-top: 20px;
 }
 .button-accept {
-  margin-top: 15px;
+  margin-top: 0px;
 	background-color:transparent;
 	border-radius:28px;
 	border:1px solid #2F2FA2;
-	display:inline-block;
+	// display:inline-block;
 	cursor:pointer;
 	color:black;
 	font-size:15px;
 	font-weight:bold;
 	padding:10px;
 	text-decoration:none;
+  margin-bottom: 15px;
   a {
     color: black;
   }
@@ -167,10 +168,12 @@
 	display:inline-block;
 	cursor:pointer;
 	color:black;
+  width: 130px;
 	font-size:15px;
 	font-weight:bold;
 	padding:10px;
 	text-decoration:none;
+  margin-bottom: 20px;
   a {
     color: black;
   }

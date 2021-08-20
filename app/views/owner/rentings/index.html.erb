@@ -46,7 +46,7 @@
         <% else %>
           <h4 class=h4-box> 💵 $<%= renting.total_price %> 💵</h4>
         <% end %>
-        <p class=min-box>  $<%= renting.vehicle.price_per_day %>/ day</p>
+
 
         <p class="p-box"> 📆 <%= renting.total_price / renting.vehicle.price_per_day %> days</p>
         <p class="p-box"> Check-in: <strong><%= renting.start_date %></strong> </strong> </p>
@@ -69,15 +69,15 @@
           <h4 class=h4-box text-center> ❌ <strong><%= renting.status%></strong> ❌</h4>
           <p class="p-box"> 🦶🏻 Don't give a shit of your offer 🦶🏻</p>
         <% else %>
-          <h4 class=h4-box text-center> 👀 <strong><%= renting.status%></strong> 👀</h4>
+          <h4 class=h4-box text-center> 👀 <strong><%= renting.status.capitalize%></strong> 👀</h4>
+          <div style=" margin-bottom: 40px"></div>
         <% end %>
 
-          <div class="button-box d-flex justify-content-around">
-          <span class= "button-accept flex-item"><%= link_to "Get the money", accept_owner_renting_path(renting), method: :patch %></span>
-          <span class="button-decline flex-item"><%= link_to "Get the fuck", decline_owner_renting_path(renting), method: :patch %></span>
-          </div>
-
-
+        <span class= "button-accept flex-item"><%= link_to "Get the money", accept_owner_renting_path(renting), method: :patch %></span>
+        <div></div>
+        <span class="button-decline flex-item"><%= link_to "Get the fuck", decline_owner_renting_path(renting), method: :patch %></span>
+        <div></div>
+        <%= link_to '🗑️', owner_renting_path(renting), method: :delete, data: { confirm: 'Are u sure ?' } %>
       </div>
 
     </div>

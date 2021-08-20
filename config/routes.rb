@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 	namespace :owner do
 		resources :vehicles, only: [:new, :create]
     resources :forms, only: [:create, :new]
-		resources :rentings, only: [:index] do
+		resources :rentings, only: [:index, :destroy] do
 			member do
 				patch :accept
 				patch :decline
