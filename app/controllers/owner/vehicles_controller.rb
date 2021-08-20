@@ -7,9 +7,14 @@ class Owner::VehiclesController < ApplicationController
     @vehicle = Vehicle.new(params_vehicle)
     @vehicle.owner = current_user
     if @vehicle.save!
-      redirect_to vehicles_path
+      redirect_to vehicle_path(@vehicle)
     else
-      render "form"
+      render :new
     end
+  end
+
+  private
+  def params_vehicle
+    params.require(:vehicle).permit(:address, :name, :summary, :photo, :vehicle_type, :total_seats, :price_per_day)
   end
 end
