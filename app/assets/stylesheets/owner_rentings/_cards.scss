@@ -44,23 +44,28 @@
 #borderLeft {
   border-left: 1px solid #2F2FA2;
   position: absolute;
-  top: 10%;
-  bottom: 10%;
+  top: 5%;
+  bottom: 5%;
   left: 0;
 }
 #borderRight {
   border-right: 1px solid #2F2FA2;
   position: absolute;
-  top: 10%;
-  bottom: 10%;
+  top: 5%;
+  bottom: 5%;
   right: 0;
 
 }
 
-.text-map-box {
+.text-button-box {
   width: 20vw;
 
 }
+
+.button-box {
+
+}
+
 
 .text-bloc {
   display: flex;
@@ -70,9 +75,7 @@
   text-align: center;
 }
 
-.button-box {
 
-}
 
 
 .header {
@@ -96,12 +99,7 @@
 
 }
 
-.map-index {
-  min-width: 50vw;
-  min-height: 100vh;
-  top: 0px;
-  border-left: 8px solid #2F2FA2;
-}
+
 
 .button-box {
   margin-top: 20px;
