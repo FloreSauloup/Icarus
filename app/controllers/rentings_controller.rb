@@ -32,7 +32,7 @@ class RentingsController < ApplicationController
     @renting = Renting.find(params[:id])
     @renting.destroy
 
-    redirect_to renting_path(@vehicle.renting)
+    redirect_to owner_rentings_path
   end
 
   def edit

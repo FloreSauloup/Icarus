@@ -17,4 +17,11 @@ class Owner::RentingsController < ApplicationController
     @renting.save
     redirect_to owner_rentings_path
   end
+
+  def destroy
+    @renting = Renting.find(params[:id])
+    @renting.destroy
+
+    redirect_to owner_rentings_path
+  end
 end
