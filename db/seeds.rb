@@ -360,7 +360,7 @@ puts "Done"
 puts 'Create renting2'
 
 start_date = Time.new(2020, 12, 09)
-end_date = Time.new(2020, 12, 10)
+end_date = Time.new(2020, 12, 11)
 
 
 Renting.create!(
