@@ -35,7 +35,15 @@
         <p class="p-box">📧 <%= renting.user.email%></p>
         <p class="p-box">☎ <%= renting.user.phone_number%></p>
         <p class="p-box">❝ <%= renting.user.description%> ❝</p>
-         <p class="p-box"> <strong><%= renting.status%></strong></p>
+         <% if renting.status == "Accept" %>
+          <h4 class=h4-box text-center> ✅ <strong><%= renting.status%></strong> ✅</h4>
+          <p class="p-box"> 🤩 Let's flying like a Angry Bird 🤩</p>
+        <% elsif renting.status == "Decline" %>
+          <h4 class=h4-box text-center> ❌ <strong><%= renting.status%></strong> ❌</h4>
+          <p class="p-box"> 🙃 Not your turn ... 🙃</p>
+          <% else %>
+          <h4 class=h4-box text-center> 👀 <strong><%= renting.status%></strong> 👀</h4>
+        <% end %>
 
       </div>
 
@@ -45,10 +53,11 @@
         <% else %>
           <h4 class=h4-box> 💵 $<%= renting.total_price %> 💵</h4>
         <% end %>
-        <h4 class=p-box>  $<%= renting.vehicle.price_per_day %>/ day</h4>
+
 
         <p class="p-box"> 📆 <%= renting.total_price / renting.vehicle.price_per_day %> days</p>
-        <p class="p-box"> From: <strong><%= renting.start_date %></strong> To: <strong><%= renting.end_date%></strong> </p>
+        <p class="p-box"> Check-in: <strong><%= renting.start_date %></strong> </strong> </p>
+        <p class="p-box"> Check-out: <strong><%= renting.end_date%></strong> </p>
 
         <div id="borderLeft"></div>
         <div id="borderRight"></div>
@@ -56,7 +65,7 @@
 
       <div class="text-map-box">
         <div id="map" class="map-index-box"
-          data-markers="<%= @markers.to_json %>"
+          data-markers="<%= [{ lat: renting.vehicle.latitude, lng: renting.vehicle.longitude }].to_json %>"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
         </div>
       </div>

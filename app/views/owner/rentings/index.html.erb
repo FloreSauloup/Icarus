@@ -24,15 +24,15 @@
     </div>
   </div>
 </div>
-<% @rentings.each do |renting| %>
 
+<% @rentings.each do |renting| %>
   <div class="all-box">
     <div class="image-bloc ">
         <span class="img-card"><%= image_tag renting.vehicle.photo %></span>
     </div>
 
     <div class="text-bloc">
-      <div class="text-guest-box ">
+      <div class="text-guest-box">
         <h4 class=h4-box>👨🏻‍💻 <%= renting.user.first_name%> <%= renting.user.last_name%></h4>
         <p class="p-box">📧 <%= renting.user.email%></p>
         <p class="p-box">☎ <%= renting.user.phone_number%></p>
@@ -46,10 +46,12 @@
         <% else %>
           <h4 class=h4-box> 💵 $<%= renting.total_price %> 💵</h4>
         <% end %>
-        <h4 class=p-box>  $<%= renting.vehicle.price_per_day %>/ day</h4>
+        <p class=min-box>  $<%= renting.vehicle.price_per_day %>/ day</p>
 
         <p class="p-box"> 📆 <%= renting.total_price / renting.vehicle.price_per_day %> days</p>
-        <p class="p-box"> From: <strong><%= renting.start_date %></strong> To: <strong><%= renting.end_date%></strong> </p>
+        <p class="p-box"> Check-in: <strong><%= renting.start_date %></strong> </strong> </p>
+        <p class="p-box"> Check-out: <strong><%= renting.end_date%></strong> </p>
+
 
 
 
@@ -60,11 +62,22 @@
       </div>
 
       <div class="text-button-box">
-        <div class="button-box d-flex justify-content-around">
-        <span class= "button-accept flex-item"><%= link_to "Get the money", accept_owner_renting_path(renting), method: :patch %></span>
-        <span class="button-decline flex-item"><%= link_to "get the fuck", decline_owner_renting_path(renting), method: :patch %></span>
-        </div>
-        <p class="p-box"> <strong><%= renting.status%></strong></p>
+        <% if renting.status == "Accept" %>
+          <h4 class=h4-box text-center> ✅ <strong><%= renting.status%></strong> ✅</h4>
+          <p class="p-box"> 🔥 Let's Burn your money earned 🔥</p>
+        <% elsif renting.status == "Decline" %>
+          <h4 class=h4-box text-center> ❌ <strong><%= renting.status%></strong> ❌</h4>
+          <p class="p-box"> 🦶🏻 Don't give a shit of your offer 🦶🏻</p>
+        <% else %>
+          <h4 class=h4-box text-center> 👀 <strong><%= renting.status%></strong> 👀</h4>
+        <% end %>
+
+          <div class="button-box d-flex justify-content-around">
+          <span class= "button-accept flex-item"><%= link_to "Get the money", accept_owner_renting_path(renting), method: :patch %></span>
+          <span class="button-decline flex-item"><%= link_to "Get the fuck", decline_owner_renting_path(renting), method: :patch %></span>
+          </div>
+
+
       </div>
 
     </div>
