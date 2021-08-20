@@ -1,9 +1,9 @@
 <div class="header-index">
-  <h1>Here are all your renting requests</h1>
+  <h1>My Requests</h1>
 </div>
 
-<div>
-  <h2>Renting requests:</h2>
+<div class="h2-title">
+  <h2>Let's see your money back</h2>
 </div>
 
 
@@ -46,7 +46,6 @@
         <% else %>
           <h4 class=h4-box> 💵 $<%= renting.total_price %> 💵</h4>
         <% end %>
-        <p class=min-box>  $<%= renting.vehicle.price_per_day %>/ day</p>
 
         <p class="p-box"> 📆 <%= renting.total_price / renting.vehicle.price_per_day %> days</p>
         <p class="p-box"> Check-in: <strong><%= renting.start_date %></strong> </strong> </p>
