@@ -62,9 +62,28 @@
 
 }
 
-.button-box {
+.text-map-box {
+  width: 25vw;
+  margin-left: 10px;
+  margin-right: 10px;
 
+  .map-index-box {
+
+
+
+
+  // border-left: 8px solid #2F2FA2;
 }
+
+.mapboxgl-map {
+  width: 350px;
+  margin-top: 20px;
+  height: 200px;
+}
+}
+
+
+
 
 
 .text-bloc {
