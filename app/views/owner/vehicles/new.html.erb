@@ -1,0 +1,8 @@
+<%= simple_form_for(@vehicle) do |f| %>
+  <%= f.input :name, required: true, label: "What's the name of your vehicle?" %>
+  <%= f.input :address, hint: "Enter the street and city" %>
+  <%= f.input :photo, as: :file, label: "Image of vehicle" %>
+  <%= f.input :summary, label: "Describe your flying vehicle" %>
+  <%= f.select :vehicle_type, ['Unusual', 'Futuristic', 'Contemporary', 'Antique', 'Extreme']%>
+  <%= f.submit %>
+<% end %>
