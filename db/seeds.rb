@@ -346,21 +346,21 @@ helico.save!
 puts "Done"
 puts 'Create renting1'
 
-start_date = Time.new(2021, 10, 31)
-end_date = Time.new(2021, 11, 31)
+start_date = Time.new(2020, 10, 31)
+end_date = Time.new(2020, 11, 31)
 Renting.create!(
   user: simon,
   vehicle: nimbus,
   start_date: start_date,
   end_date: end_date,
   total_price: ((end_date - start_date) * nimbus.price_per_day)/ 86400,
-  status: "rented"
+  status: "Accepted"
 )
 puts "Done"
 puts 'Create renting2'
 
-start_date = Time.new(2021, 11, 27)
-end_date = Time.new(2021, 12, 10)
+start_date = Time.new(2020, 12, 09)
+end_date = Time.new(2020, 12, 11)
 
 
 Renting.create!(
